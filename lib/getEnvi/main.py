@@ -7,7 +7,7 @@ import yaml
 COMMAND1 = "show environment"
 COMMAND2 = "show env all"
 HEADERS = ['No','Hostname', 'Site', 'Power Supply', 'Temperature', 'Fan']
-ERROR_COMMAND = ['Invalid', 'No such process', 'Incomplete', 'Unknown', 'Ambiguous']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getEnvironment/"
 TEMPLATE_NUMBERS = 5
@@ -50,7 +50,7 @@ def process_device(device, i):
         else:
             while parsed == "" and num_try < TEMPLATE_NUMBERS:
                 num_try += 1
-                parsed = device.parse(command, output, num_try)
+                parsed = device.parse(COMMAND1, output, num_try)
         
         #special templates
         if parsed != "":

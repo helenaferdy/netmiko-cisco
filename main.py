@@ -3,10 +3,12 @@ from lib.getInven.main import main as Inven
 from lib.getEnvi.main import main as Envi
 from lib.getCustom.main import main as Custom
 from lib.getCDP.main import main as CDP
+from lib.getCRC.main import main as CRC
 
 
-# CPU()
-# Inven()
-# Envi()
+CPU()
+Inven()
+Envi()
 Custom()
-# CDP()
+CDP()
+CRC()

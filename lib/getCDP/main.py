@@ -8,7 +8,7 @@ COMMAND1 = "show cdp neighbors"
 COMMAND2 = "show cdp neighbor"
 COMMAND_PLATFORM = "show platform"
 HEADERS = ['No', 'Local Hostname', 'Local Interface', 'Local Platform', 'Remote Hostname', 'Remote Interface', 'Remote Platform', 'Capability']
-ERROR_COMMAND = ['Invalid', 'No such process', 'Incomplete', 'Unknown', 'Ambiguous']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getCDP/"
 TEMPLATE_NUMBERS = 1
@@ -54,7 +54,7 @@ def process_device(device, i):
         else:
             while parsed == "" and num_try < TEMPLATE_NUMBERS:
                 num_try += 1
-                parsed = device.parse(command, output, num_try)
+                parsed = device.parse(COMMAND1, output, num_try)
         
         ## GET PLATFORM
         output_platform = device.connect_command(COMMAND_PLATFORM)

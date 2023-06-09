@@ -15,7 +15,7 @@ devices:
   xe2:
     connections:
       cli:
-        ip: 198.18.0.129
+        ip: 198.18.0.122
         protocol: ssh
     credentials:
       default:

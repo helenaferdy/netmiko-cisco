@@ -1,16 +1,16 @@
-from lib.getInven.device import Routers, TIMESTAMP
+from lib.getCRC.device import Routers, TIMESTAMP
 import csv
 import threading
 import os
 import yaml
 
-COMMAND1 = "show inventory"
-COMMAND2 = "show inventory"
-HEADERS = ['No_Hostname', 'Hostname', 'No_Inventory', 'Name', 'PID', 'SN']
+COMMAND1 = "show interfaces"
+COMMAND2 = "show int"
+HEADERS = ['No', 'Hostname', 'Interface', 'CRC', 'Input Errors', 'Output Errors']
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getInventory/"
-TEMPLATE_NUMBERS = 2
+OUTPATH = "out/getCRC/"
+TEMPLATE_NUMBERS = 1
 devices = []
 success_counter = []
 

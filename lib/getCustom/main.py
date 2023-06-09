@@ -3,7 +3,7 @@ import threading
 import yaml
 
 
-ERROR_COMMAND = ['Invalid', 'No such process', 'Incomplete', 'Unknown', 'Ambiguous', 'subcommands']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands']
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getCustom/"
 CUSTOM_FILE = "import/custom.txt"

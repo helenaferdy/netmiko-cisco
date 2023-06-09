@@ -1,0 +1,7 @@
+Value CHASSIS (\S+)
+
+Start
+  ^\-+ -> Parse
+
+Parse
+  ^\S+\s+${CHASSIS}\s+(\S+(\s\S+)*)\s+(\S+)? -> Record

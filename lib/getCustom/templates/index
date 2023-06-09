@@ -27,3 +27,17 @@ helena_show_environment_3.textfsm, .*, .*, show environment 3
 helena_show_environment_4.textfsm, .*, .*, show environment 4
 #custom nexus7k
 helena_show_environment_5.textfsm, .*, .*, show environment 5
+
+
+##CDP
+#default ios
+helena_show_cdp_neighbors_1.textfsm, .*, .*, show cdp neighbors 1
+#default ios
+helena_show_cdp_neighbors_2.textfsm, .*, .*, show cdp neighbors 2
+
+
+##platform
+#default iosxe
+helena_show_platform_1.textfsm, .*, .*, show platform 1
+#default iosxr
+helena_show_platform_2.textfsm, .*, .*, show platform 2

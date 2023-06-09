@@ -1,7 +1,6 @@
 from netmiko import ConnectHandler
 from ntc_templates.parse import parse_output
 import os
-import csv
 import logging, sys
 import datetime
 

@@ -12,6 +12,7 @@ TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getInventory/"
 TEMPLATE_NUMBERS = 2
 devices = []
+success_counter = []
 
 def main():
     read_testbed()
@@ -26,6 +27,8 @@ def main():
 
     for t in threads:
         t.join()
+
+    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
 
 def process_device(device, i):
     parsed = ""
@@ -52,6 +55,7 @@ def process_device(device, i):
         #special templates
         if parsed != "":
             device.export_csv(parsed)
+            success_counter.append(device.hostname)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 

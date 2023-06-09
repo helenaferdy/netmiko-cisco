@@ -12,6 +12,7 @@ TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getCPU/"
 TEMPLATE_NUMBERS = 4
 devices = []
+success_counter = []
 
 def main():
     read_testbed()
@@ -27,8 +28,11 @@ def main():
     for t in threads:
         t.join()
 
+    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
+
 def process_device(device, i):
     parsed = ""
+    num_try = 0
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
@@ -44,7 +48,6 @@ def process_device(device, i):
         if [c for c in ERROR_COMMAND if c in output]:
             device.logging_error(f"{device.hostname} : Output return empty for command [{command}]")
         else:
-            num_try = 0
             while parsed == "" and num_try < TEMPLATE_NUMBERS:
                 num_try += 1
                 parsed = device.parse(command, output, num_try)
@@ -55,6 +58,7 @@ def process_device(device, i):
                 device.export_csv_3(parsed)
             else:
                 device.export_csv(parsed)
+            success_counter.append(device.hostname)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 

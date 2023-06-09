@@ -14,6 +14,7 @@ OUTPATH = "out/getCDP/"
 TEMPLATE_NUMBERS = 1
 TEMPLATE_NUMBERS_PLATFORM = 2
 devices = []
+success_counter = []
 
 def main():
     read_testbed()
@@ -28,6 +29,8 @@ def main():
 
     for t in threads:
         t.join()
+
+    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
 
 def process_device(device, i):
     parsed = ""
@@ -56,7 +59,7 @@ def process_device(device, i):
         ## GET PLATFORM
         output_platform = device.connect_command(COMMAND_PLATFORM)
         if [c for c in ERROR_COMMAND if c in output_platform]:
-            device.logging_error(f"{device.hostname} : Output return empty for command [{command}]")
+            device.logging_error(f"{device.hostname} : Output return empty for command [{COMMAND_PLATFORM}]")
         else:
             while parsed_platform == "" and num_try_p < TEMPLATE_NUMBERS_PLATFORM:
                 num_try_p += 1
@@ -67,10 +70,8 @@ def process_device(device, i):
 
         #special templates
         if parsed != "":
-            if num_try == 3:
-                device.export_csv_3(parsed)
-            else:
-                device.export_csv(parsed)
+            device.export_csv(parsed)
+            success_counter.append(device.hostname)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 

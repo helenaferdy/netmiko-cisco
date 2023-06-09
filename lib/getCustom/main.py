@@ -1,19 +1,15 @@
 from lib.getCustom.device import Routers, TIMESTAMP
-import csv
 import threading
-import os
 import yaml
 
-# COMMAND1 = "show environment"
-# COMMAND2 = "show env all"
-# HEADERS = ['No','Hostname', 'Site', 'Power Supply', 'Temperature', 'Fan']
+
 ERROR_COMMAND = ['Invalid', 'No such process', 'Incomplete', 'Unknown', 'Ambiguous', 'subcommands']
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getCustom/"
 CUSTOM_FILE = "import/custom.txt"
-# TEMPLATE_NUMBERS = 5
 devices = []
 custom_commands = []
+success_counter = []
 
 def main():
     read_testbed()
@@ -29,9 +25,12 @@ def main():
     for t in threads:
         t.join()
 
+    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
+
 def process_device(device, i):
     device.create_folder()
     if device.connect(i):
+        success_counter.append(device.hostname)
         for command in custom_commands:
             output = device.connect_command(command)
         

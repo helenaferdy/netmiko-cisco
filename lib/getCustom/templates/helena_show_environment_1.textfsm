@@ -1,0 +1,16 @@
+# Value Fillup CRITICAL (\d+)
+# Value MAJORALARM (\d+)
+# Value MINORALARM (\d+)
+Value Key PART ((^\s+[P|R]+[0-9]))
+Value SENSOR (([Temp]+\s+[0-9]+|[a-z]+[0-9]+|[\S*]+\s+[Out|In|pwr]+|[Inlet\s+|Outlet\s+]+[0-9]+|[pwr]+|[\s+core-]+\S*|[0-9].[0-9]v[-A-Z0-9]+|\S*))
+Value STATE (\w*)
+Value SENSORVALUE (([0-9]+))
+Value UNIT (([\S*]+|\S*))
+
+
+Start
+  ^\s+Slot -> Device
+
+Device
+  ^${PART}\s+[\S*]+:\s+${SENSOR}\s+${STATE}\s+${SENSORVALUE}(\s+)${UNIT} -> Record
+  

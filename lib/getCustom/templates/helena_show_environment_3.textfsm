@@ -1,0 +1,6 @@
+Value FAN ([A-Za-z]+)
+Value TEMP ([A-Za-z]+)
+
+Start
+ ^FAN is ${FAN}
+ ^SYSTEM TEMPERATURE is ${TEMP}

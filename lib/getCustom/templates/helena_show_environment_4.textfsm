@@ -1,0 +1,8 @@
+Value FAN ([A-Za-z]+)
+Value TEMP ([A-Za-z]+)
+
+Start
+ ^Switch \d FAN \d is ${FAN} -> Record
+ ^FAN PS-\d is ${FAN} -> Record
+ ^Switch \d: SYSTEM TEMPERATURE is ${TEMP} -> Record
+

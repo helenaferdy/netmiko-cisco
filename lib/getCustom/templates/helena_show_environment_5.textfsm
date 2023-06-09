@@ -1,0 +1,10 @@
+Value POWER ([A-Za-z]+)
+Value FAN ([A-Za-z]+)
+Value TEMP ([A-Za-z]+)
+
+Start
+ ^\d\s+N7K-[A-Za-z]+-\d\.0KW\s+[0-9]+\s+W\s+[0-9]+\s+W\s+${POWER}
+ ^([A-Za-z0-9]+(_[A-Za-z0-9]+)+)\s+--\s+--\s+${FAN} 
+ ^\d\s+CPU\dCORE\d\([A-Za-z0-9]+\)\s+([0-9]+( +[0-9]+)+)\s+${TEMP} 
+
+

@@ -1,0 +1,9 @@
+# Value CORE (\d+)
+Value USER ([0-9]*\.[0-9]+)
+Value KERNEL ([0-9]*\.[0-9]+)
+Value IDLE ([0-9]*\.[0-9]+)
+
+Start
+  # ^[A-Za-z]+\s+[A-Za-z]+\s+:\s+${CPU_5_SEC} -> Record
+  ^CPU\s+util\s+:\s+${USER}%\s+user,\s+${KERNEL}%\s+kernel,\s+${IDLE}%\s+idle
+

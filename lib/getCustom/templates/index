@@ -1,0 +1,29 @@
+Template, Hostname, Platform, Command
+
+##CPU
+#default ios
+helena_show_processes_cpu_1.textfsm, .*, .*, show processes cpu 1
+#multiple cores
+helena_show_processes_cpu_2.textfsm, .*, .*, show processes cpu 2
+#summary bottom with user & kernel usage
+helena_show_processes_cpu_3.textfsm, .*, .*, show processes cpu 3
+#default ios xr
+helena_show_processes_cpu_4.textfsm, .*, .*, show processes cpu 4
+
+##INVENTORY
+#default ios & xr
+helena_show_inventory_1.textfsm, .*, .*, show inventory 1
+#default nxos
+helena_show_inventory_2.textfsm, .*, .*, show inventory 2
+
+##ENVIRONMENT
+#default ios
+helena_show_environment_1.textfsm, .*, .*, show environment 1
+#nxos
+helena_show_environment_2.textfsm, .*, .*, show environment 2
+#custom show env all
+helena_show_environment_3.textfsm, .*, .*, show environment 3
+#custom show environment all
+helena_show_environment_4.textfsm, .*, .*, show environment 4
+#custom nexus7k
+helena_show_environment_5.textfsm, .*, .*, show environment 5

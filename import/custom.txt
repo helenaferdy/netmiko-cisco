@@ -1,0 +1,6 @@
+show ip interface brief
+show
+show ip ospf neighbor
+show vlan brief
+show cdp neighbor
+show p

@@ -21,7 +21,9 @@ class Routers:
             self.port = "22"
         elif protocol == "telnet":
             self.port = "23"
-        
+        self.exception_counter = 0
+
+
         self.out_path = f"out/getCustom/{DATE_PATH}/"
         self.log_path = "log/getCustom.log"
         self.errorlog_path = "log/error/"
@@ -102,13 +104,14 @@ class Routers:
 
     def connect_command(self, command):
         try:
-            output = self.connection.send_command(command)
+            output = self.connection.send_command(command, read_timeout=15)
             logging.info(f"{self.hostname} : Command '{command}' sent")
             return output
         except Exception as e:
-            err = (f"{self.hostname} : Failed sending command '{command}'")
+            self.exception_counter += 1
+            err = (f"{self.hostname} : [{self.exception_counter}] Exception sending command '{command}'")
             self.logging_error(err, e)
-            return "Invalid"
+            return "Function exception"
 
 
     def export_data(self, command, output):

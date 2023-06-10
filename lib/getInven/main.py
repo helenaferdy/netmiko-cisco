@@ -7,7 +7,7 @@ import yaml
 COMMAND1 = "show inventory"
 COMMAND2 = "show inventory"
 HEADERS = ['No_Hostname', 'Hostname', 'No_Inventory', 'Name', 'PID', 'SN']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getInventory/"
 TEMPLATE_NUMBERS = 2
@@ -36,7 +36,9 @@ def process_device(device, i):
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
-        output = device.connect_command(command)
+        output = "Function exception"
+        while output == "Function exception" and device.exception_counter < 3:
+            output = device.connect_command(command)
 
         #try other command
         if [c for c in ERROR_COMMAND if c in output]:

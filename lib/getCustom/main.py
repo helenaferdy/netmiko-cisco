@@ -3,7 +3,7 @@ import threading
 import yaml
 
 
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getCustom/"
 CUSTOM_FILE = "import/custom.txt"
@@ -32,7 +32,9 @@ def process_device(device, i):
     if device.connect(i):
         success_counter.append(device.hostname)
         for command in custom_commands:
-            output = device.connect_command(command)
+            output = "Function exception"
+            while output == "Function exception" and device.exception_counter < 3:
+                output = device.connect_command(command)
         
             if [c for c in ERROR_COMMAND if c in output]:
                 device.logging_error(f"{device.hostname} : Output return empty for command [{command}]")

@@ -7,7 +7,7 @@ import yaml
 COMMAND1 = "show environment"
 COMMAND2 = "show env all"
 HEADERS = ['No','Hostname', 'Site', 'Power Supply', 'Temperature', 'Fan']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 OUTPATH = "out/getEnvironment/"
 TEMPLATE_NUMBERS = 5
@@ -36,7 +36,9 @@ def process_device(device, i):
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
-        output = device.connect_command(command)
+        output = "Function exception"
+        while output == "Function exception" and device.exception_counter < 3:
+            output = device.connect_command(command)
 
         #try other command
         if [c for c in ERROR_COMMAND if c in output]:

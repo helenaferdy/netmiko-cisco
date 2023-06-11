@@ -1,0 +1,44 @@
+
+---------------------------------------------------------------------------
+show ip interface brief
+---------------------------------------------------------------------------
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       198.18.0.122    YES NVRAM  up                    up      
+GigabitEthernet2       2.2.12.2        YES NVRAM  up                    up      
+GigabitEthernet3       2.2.23.2        YES NVRAM  up                    up      
+Loopback0              1.1.2.2         YES NVRAM  up                    up      
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show ip ospf neighbor
+---------------------------------------------------------------------------
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.2.3           1   FULL/DR         00:00:38    2.2.23.3        GigabitEthernet3
+1.1.2.1           1   FULL/BDR        00:00:36    2.2.12.1        GigabitEthernet2
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show cdp neighbor
+---------------------------------------------------------------------------
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+xe1.helena.gg    Gig 1             148              R I   CSR1000V  Gig 6
+xe5              Gig 1             161              R I   CSR1000V  Gig 1
+xe4              Gig 1             147              R I   CSR1000V  Gig 1
+xe3              Gig 1             138              R I   CSR1000V  Gig 1
+UCSM-A(SSI17360D2Y)
+                 Gig 1             156             S I C  UCS-FI-62 Vethernet867
+xr1              Gig 1             132               R    IOS-XRv 9 Gig 0/0/0/0
+
+Total cdp entries displayed : 6
+---------------------------------------------------------------------------
+
+

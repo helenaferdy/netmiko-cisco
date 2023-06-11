@@ -6,9 +6,9 @@ from lib.getCDP.main import main as CDP
 from lib.getCRC.main import main as CRC
 
 
-CPU()
-Inven()
-Envi()
-Custom()
-CDP()
-CRC()
+# CPU()
+# Inven()
+# Envi()
+# Custom()
+# CDP()
+# CRC()

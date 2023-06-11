@@ -1,0 +1,3 @@
+2023-06-11 10:52:34 [ERROR] xr1 : [1] Parsing empty for template 'show processes cpu 1'
+2023-06-11 10:52:34 [ERROR] xr1 : [2] Parsing empty for template 'show processes cpu 2'
+2023-06-11 10:52:34 [ERROR] xr1 : [3] Parsing empty for template 'show processes cpu 3'

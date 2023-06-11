@@ -1,0 +1,51 @@
+
+---------------------------------------------------------------------------
+show ip interface brief
+---------------------------------------------------------------------------
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       198.18.0.121    YES NVRAM  up                    up      
+GigabitEthernet2       110.0.0.1       YES NVRAM  up                    up      
+GigabitEthernet3       2.2.12.1        YES NVRAM  up                    up      
+GigabitEthernet4       120.0.0.1       YES NVRAM  up                    up      
+GigabitEthernet5       100.0.0.1       YES NVRAM  up                    up      
+GigabitEthernet6       123.0.0.2       YES NVRAM  up                    up      
+GigabitEthernet7       unassigned      YES NVRAM  administratively down down    
+Loopback0              1.1.2.1         YES NVRAM  up                    up      
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show ip ospf neighbor
+---------------------------------------------------------------------------
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.2.2           1   FULL/DR         00:00:35    2.2.12.2        GigabitEthernet3
+198.18.0.31       1   FULL/BDR        00:00:39    123.0.0.1       GigabitEthernet6
+90.0.0.2          1   FULL/BDR        00:00:32    100.0.0.2       GigabitEthernet5
+196.10.0.1        1   FULL/DR         00:00:32    120.0.0.2       GigabitEthernet4
+198.18.0.161      1   FULL/DR         00:00:32    110.0.0.2       GigabitEthernet2
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show cdp neighbor
+---------------------------------------------------------------------------
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+xe5              Gig 6             161              R I   CSR1000V  Gig 1
+xe4              Gig 6             147              R I   CSR1000V  Gig 1
+xe3              Gig 6             139              R I   CSR1000V  Gig 1
+xe2              Gig 6             136              R I   CSR1000V  Gig 1
+UCSM-A(SSI17360D2Y)
+                 Gig 6             156             S I C  UCS-FI-62 Vethernet867
+xr1              Gig 6             133               R    IOS-XRv 9 Gig 0/0/0/0
+
+Total cdp entries displayed : 6
+---------------------------------------------------------------------------
+
+

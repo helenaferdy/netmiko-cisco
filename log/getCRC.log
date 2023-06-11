@@ -1,0 +1,27 @@
+2023-06-11 10:53:45,675 [INFO] xe1 : Connecting 
+2023-06-11 10:53:45,676 [INFO] xe2 : Connecting 
+2023-06-11 10:53:45,676 [INFO] xr1 : Connecting 
+2023-06-11 10:53:45,734 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:45,740 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:45,947 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 10:53:46,457 [INFO] Authentication (password) successful!
+2023-06-11 10:53:46,458 [INFO] Authentication (password) successful!
+2023-06-11 10:53:46,704 [INFO] Authentication (password) successful!
+2023-06-11 10:53:47,088 [WARNING] xe1 : Connect success
+2023-06-11 10:53:47,126 [WARNING] xe2 : Connect success
+2023-06-11 10:53:47,396 [INFO] xe1 : Entered enable mode
+2023-06-11 10:53:47,450 [INFO] xe2 : Entered enable mode
+2023-06-11 10:53:47,473 [WARNING] xr1 : Connect success
+2023-06-11 10:53:47,519 [INFO] xr1 : Entered enable mode
+2023-06-11 10:53:47,586 [INFO] xe1 : Command 'show interfaces' sent
+2023-06-11 10:53:47,598 [INFO] xe1 : [1] Parsing success for template 'show interfaces 1'
+2023-06-11 10:53:47,598 [INFO] xe1 : Export success to out/getCRC/show interfaces_2023-06-11_10-53.csv
+2023-06-11 10:53:47,599 [INFO] xe2 : Command 'show interfaces' sent
+2023-06-11 10:53:47,601 [INFO] xe2 : [1] Parsing success for template 'show interfaces 1'
+2023-06-11 10:53:47,601 [INFO] xe2 : Export success to out/getCRC/show interfaces_2023-06-11_10-53.csv
+2023-06-11 10:53:47,626 [INFO] xe2 : Disconnected succcessfully
+2023-06-11 10:53:47,636 [INFO] xe1 : Disconnected succcessfully
+2023-06-11 10:53:48,370 [INFO] xr1 : Command 'show interfaces' sent
+2023-06-11 10:53:48,377 [INFO] xr1 : [1] Parsing success for template 'show interfaces 1'
+2023-06-11 10:53:48,377 [INFO] xr1 : Export success to out/getCRC/show interfaces_2023-06-11_10-53.csv
+2023-06-11 10:53:48,413 [INFO] xr1 : Disconnected succcessfully

@@ -1,11 +1,11 @@
 from lib.getCustom.device import Routers, TIMESTAMP
 import threading
+import os
 import yaml
 
-
+TITLE = "getCustom"
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands', "Function exception"]
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getCustom/"
 CUSTOM_FILE = "import/custom.txt"
 devices = []
 custom_commands = []
@@ -13,6 +13,7 @@ success_counter = []
 
 def main():
     read_testbed()
+    create_folder_1()
     read_custom_commands()
     i = 1
     threads = []
@@ -28,9 +29,12 @@ def main():
     print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
 
 def process_device(device, i):
+    device.out_path = f"out/{TITLE}/"
+    device.log_path = f"log/{TITLE}.log"
+    device.errorlog = f"log/error/{TITLE}-error.log"
     device.create_folder()
     if device.connect(i):
-        success_counter.append(device.hostname)
+        success_counter.append(0)
         for command in custom_commands:
             output = "Function exception"
             while output == "Function exception" and device.exception_counter < 3:
@@ -39,7 +43,7 @@ def process_device(device, i):
             if [c for c in ERROR_COMMAND if c in output]:
                 device.logging_error(f"{device.hostname} : Output return empty for command [{command}]")
             else:
-                device.export_data(command, output)
+                device.export_data_custom(command, output)
 
         device.disconnect()
 
@@ -65,6 +69,11 @@ def read_testbed():
                 the_protocol
             )
             devices.append(new_device)
+
+def create_folder_1():
+    outpath = f'out/{TITLE}/'
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
 def read_custom_commands():
     with open(CUSTOM_FILE, "r") as f:

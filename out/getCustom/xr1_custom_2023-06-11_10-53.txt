@@ -1,0 +1,57 @@
+
+---------------------------------------------------------------------------
+show ip interface brief
+---------------------------------------------------------------------------
+
+Sun Jun 11 03:45:00.276 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+MgmtEth0/RP0/CPU0/0            unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/0         198.18.0.131    Up              Up       default 
+GigabitEthernet0/0/0/1         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/2         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/3         120.0.0.2       Up              Up       default 
+GigabitEthernet0/0/0/4         196.10.0.1      Up              Up       default 
+GigabitEthernet0/0/0/5         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/6         unassigned      Shutdown        Down     default 
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show ip ospf neighbor
+---------------------------------------------------------------------------
+
+Sun Jun 11 03:45:00.790 UTC
+
+* Indicates MADJ interface
+# Indicates Neighbor awaiting BFD session up
+
+Neighbors for OSPF 1
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.2.1         1     FULL/BDR        00:00:39    120.0.0.1       GigabitEthernet0/0/0/3
+    Neighbor is up for 13w2d
+
+Total neighbor count: 1
+---------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------
+show cdp neighbor
+---------------------------------------------------------------------------
+
+Sun Jun 11 03:45:01.208 UTC
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID       Local Intrfce    Holdtme Capability Platform  Port ID
+xe3             Gi0/0/0/0        138     R I        CSR1000V  Gi1             
+xe2             Gi0/0/0/0        135     R I        CSR1000V  Gi1             
+xe5             Gi0/0/0/0        160     R I        CSR1000V  Gi1             
+xe4             Gi0/0/0/0        146     R I        CSR1000V  Gi1             
+xe1.helena.gg   Gi0/0/0/0        147     R I        CSR1000V  Gi6             
+---------------------------------------------------------------------------
+
+

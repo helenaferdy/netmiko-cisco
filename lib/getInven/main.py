@@ -1,15 +1,15 @@
-from lib.getInven.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP
 import csv
 import threading
 import os
 import yaml
 
+TITLE = "getInventory"
 COMMAND1 = "show inventory"
 COMMAND2 = "show inventory"
 HEADERS = ['No_Hostname', 'Hostname', 'No_Inventory', 'Name', 'PID', 'SN']
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getInventory/"
 TEMPLATE_NUMBERS = 2
 devices = []
 success_counter = []
@@ -33,6 +33,10 @@ def main():
 def process_device(device, i):
     parsed = ""
     num_try = 0
+    device.command_template = COMMAND1
+    device.out_path = f"out/{TITLE}/"
+    device.log_path = f"log/{TITLE}.log"
+    device.errorlog = f"log/error/{TITLE}-error.log"
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
@@ -56,18 +60,20 @@ def process_device(device, i):
         
         #special templates
         if parsed != "":
-            device.export_csv(parsed)
-            success_counter.append(device.hostname)
+            final = export_csv(parsed, i, device.hostname)
+            device.export_data(final, "inventory")
+            success_counter.append(0)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 
         device.disconnect()
 
 def export_headers():
-    if not os.path.exists(OUTPATH):
-        os.makedirs(OUTPATH)
+    outpath = f'out/{TITLE}/'
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
-    with open(f"{OUTPATH}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
+    with open(f"{outpath}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(HEADERS)
 
@@ -89,7 +95,21 @@ def read_testbed():
                 the_password,
                 the_enable,
                 the_ios_os,
-                the_protocol,
-                COMMAND1
+                the_protocol
             )
             devices.append(new_device)
+
+#universal template
+def export_csv(parsed, i, hostname):
+    finals = []
+    i = 1
+    for p in parsed:
+        name = p['descr']
+        pid = p['pid']
+        sn = p['sn']
+
+        final = [i, hostname, i, name, pid, sn]
+        finals.append(final)
+        i +=1
+    return finals
+

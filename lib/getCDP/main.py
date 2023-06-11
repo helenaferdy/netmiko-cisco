@@ -1,16 +1,16 @@
-from lib.getCDP.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP
 import csv
 import threading
 import os
 import yaml
 
+TITLE = "getCDP"
 COMMAND1 = "show cdp neighbors"
 COMMAND2 = "show cdp neighbor"
 COMMAND_PLATFORM = "show platform"
 HEADERS = ['No', 'Local Hostname', 'Local Interface', 'Local Platform', 'Remote Hostname', 'Remote Interface', 'Remote Platform', 'Capability']
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command']
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getCDP/"
 TEMPLATE_NUMBERS = 1
 TEMPLATE_NUMBERS_PLATFORM = 2
 devices = []
@@ -34,9 +34,14 @@ def main():
 
 def process_device(device, i):
     parsed = ""
+    platform = ""
     parsed_platform = ""
     num_try = 0
     num_try_p = 0
+    device.command_template = COMMAND1
+    device.out_path = f"out/{TITLE}/"
+    device.log_path = f"log/{TITLE}.log"
+    device.errorlog = f"log/error/{TITLE}-error.log"
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
@@ -65,23 +70,25 @@ def process_device(device, i):
                 num_try_p += 1
                 parsed_platform = device.parse(COMMAND_PLATFORM, output_platform, num_try_p)
         if parsed_platform != "":
-            device.platform = parsed_platform[0]['chassis']
+            platform = parsed_platform[0]['chassis']
     
 
         #special templates
         if parsed != "":
-            device.export_csv(parsed)
-            success_counter.append(device.hostname)
+            final = export_csv(parsed, i, device.hostname, platform)
+            device.export_data(final, "cdp")
+            success_counter.append(0)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 
         device.disconnect()
 
 def export_headers():
-    if not os.path.exists(OUTPATH):
-        os.makedirs(OUTPATH)
+    outpath = f'out/{TITLE}/'
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
-    with open(f"{OUTPATH}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
+    with open(f"{outpath}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(HEADERS)
 
@@ -103,7 +110,20 @@ def read_testbed():
                 the_password,
                 the_enable,
                 the_ios_os,
-                the_protocol,
-                COMMAND1
+                the_protocol
             )
             devices.append(new_device)
+
+    #universal template
+def export_csv(parsed, i, hostname, platform):
+    finals = []
+    for p in parsed:
+        local_int = p['local_interface']
+        remote_hostname = p['neighbor']
+        remote_platform = p['platform']
+        remote_int = p['neighbor_interface']
+        capability = p['capability']
+
+        final = [i, hostname, local_int, platform, remote_hostname, remote_int, remote_platform, capability]
+        finals.append(final)
+    return finals

@@ -1,15 +1,15 @@
-from lib.getEnvi.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP
 import csv
 import threading
 import os
 import yaml
 
+TITLE = "getEnvironment"
 COMMAND1 = "show environment"
 COMMAND2 = "show env all"
 HEADERS = ['No','Hostname', 'Site', 'Power Supply', 'Temperature', 'Fan']
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getEnvironment/"
 TEMPLATE_NUMBERS = 5
 devices = []
 success_counter = []
@@ -33,6 +33,10 @@ def main():
 def process_device(device, i):
     parsed = ""
     num_try = 0
+    device.command_template = COMMAND1
+    device.out_path = f"out/{TITLE}/"
+    device.log_path = f"log/{TITLE}.log"
+    device.errorlog = f"log/error/{TITLE}-error.log"
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
@@ -56,21 +60,24 @@ def process_device(device, i):
         
         #special templates
         if parsed != "":
-            if num_try >= 3 and num_try <= 5:
-                device.export_csv_3(parsed)
+            if num_try <= 2:
+                final = export_csv(parsed, i, device.hostname)
+                device.export_data(final)
             else:
-                device.export_csv(parsed)
-            success_counter.append(device.hostname)
+                final = export_csv_3(parsed, i, device.hostname)
+                device.export_data(final)
+            success_counter.append(0)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 
         device.disconnect()
 
 def export_headers():
-    if not os.path.exists(OUTPATH):
-        os.makedirs(OUTPATH)
+    outpath = f'out/{TITLE}/'
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
-    with open(f"{OUTPATH}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
+    with open(f"{outpath}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(HEADERS)
 
@@ -92,7 +99,41 @@ def read_testbed():
                 the_password,
                 the_enable,
                 the_ios_os,
-                the_protocol,
-                COMMAND1
+                the_protocol
             )
             devices.append(new_device)
+
+#universal template
+def export_csv(parsed, i, hostname):
+    power = "OK"
+    temp = "OK"
+    fan = "OK"
+
+    for p in parsed:
+        if "pwr" in p['sensor']:
+            if p['state'] != "Normal":
+                power = "NOK"
+        elif "fan" in p['sensor']:
+            if p['state'] != "Normal":
+                temp = "NOK"
+        elif "Temp" in p['sensor']:
+            if p['state'] != "Normal":
+                fan = "NOK"
+
+    final = [i, hostname, "DC", power, fan, temp]
+    return final
+
+#template no 3, 4, 5
+def export_csv_3(parsed, i, hostname):
+    power = "OK"
+    temp = "OK"
+    fan = "OK"
+
+    for p in parsed:
+        if p['temp'] != "":
+            temp = p['temp'] 
+        if p['fan'] != "":
+            fan = p['fan']
+
+    final = [i, hostname, "DC", power, fan, temp]
+    return final

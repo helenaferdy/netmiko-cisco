@@ -1,0 +1,34 @@
+2023-06-11 10:53:33,991 [INFO] xe2 : Connecting 
+2023-06-11 10:53:33,991 [INFO] xr1 : Connecting 
+2023-06-11 10:53:33,991 [INFO] xe1 : Connecting 
+2023-06-11 10:53:34,052 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:34,052 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:34,224 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 10:53:34,620 [INFO] Authentication (password) successful!
+2023-06-11 10:53:34,691 [INFO] Authentication (password) successful!
+2023-06-11 10:53:34,813 [INFO] Authentication (password) successful!
+2023-06-11 10:53:35,010 [WARNING] xe2 : Connect success
+2023-06-11 10:53:35,047 [WARNING] xe1 : Connect success
+2023-06-11 10:53:35,199 [INFO] xe2 : Entered enable mode
+2023-06-11 10:53:35,249 [INFO] xe1 : Entered enable mode
+2023-06-11 10:53:35,331 [INFO] xe2 : Command 'show cdp neighbors' sent
+2023-06-11 10:53:35,341 [INFO] xe2 : [1] Parsing success for template 'show cdp neighbors 1'
+2023-06-11 10:53:35,384 [INFO] xe1 : Command 'show cdp neighbors' sent
+2023-06-11 10:53:35,388 [INFO] xe1 : [1] Parsing success for template 'show cdp neighbors 1'
+2023-06-11 10:53:35,473 [INFO] xe2 : Command 'show platform' sent
+2023-06-11 10:53:35,475 [INFO] xe2 : [1] Parsing success for template 'show platform 1'
+2023-06-11 10:53:35,476 [INFO] xe2 : Export success to out/getCDP/show cdp neighbors_2023-06-11_10-53.csv
+2023-06-11 10:53:35,501 [INFO] xe2 : Disconnected succcessfully
+2023-06-11 10:53:35,519 [INFO] xe1 : Command 'show platform' sent
+2023-06-11 10:53:35,520 [INFO] xe1 : [1] Parsing success for template 'show platform 1'
+2023-06-11 10:53:35,521 [INFO] xe1 : Export success to out/getCDP/show cdp neighbors_2023-06-11_10-53.csv
+2023-06-11 10:53:35,523 [WARNING] xr1 : Connect success
+2023-06-11 10:53:35,547 [INFO] xe1 : Disconnected succcessfully
+2023-06-11 10:53:35,549 [INFO] xr1 : Entered enable mode
+2023-06-11 10:53:36,163 [INFO] xr1 : Command 'show cdp neighbors' sent
+2023-06-11 10:53:36,168 [INFO] xr1 : [1] Parsing success for template 'show cdp neighbors 1'
+2023-06-11 10:53:36,537 [INFO] xr1 : Command 'show platform' sent
+2023-06-11 10:53:36,540 [ERROR] xr1 : [1] Parsing empty for template 'show platform 1'
+2023-06-11 10:53:36,542 [INFO] xr1 : [2] Parsing success for template 'show platform 2'
+2023-06-11 10:53:36,543 [INFO] xr1 : Export success to out/getCDP/show cdp neighbors_2023-06-11_10-53.csv
+2023-06-11 10:53:36,607 [INFO] xr1 : Disconnected succcessfully

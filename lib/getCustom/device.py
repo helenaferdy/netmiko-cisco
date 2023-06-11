@@ -1,12 +1,12 @@
 from netmiko import ConnectHandler
 from ntc_templates.parse import parse_output
 import os
+import csv
 import logging, sys
 import datetime
 
 CONNECT_RETRY = 2
 TIMESTAMP = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')
-DATE_PATH = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')
 os.environ["NTC_TEMPLATES_DIR"] = "lib/getCustom/templates"
 
 class Routers:
@@ -22,12 +22,12 @@ class Routers:
         elif protocol == "telnet":
             self.port = "23"
         self.exception_counter = 0
-
-
-        self.out_path = f"out/getCustom/{DATE_PATH}/"
-        self.log_path = "log/getCustom.log"
+        
+        self.command_template = ""
         self.errorlog_path = "log/error/"
-        self.errorlog = self.errorlog_path+"getCustom-error.log"
+        self.out_path = ""
+        self.log_path = ""
+        self.errorlog = ""
 
     def create_folder(self):
         try:
@@ -89,7 +89,7 @@ class Routers:
                 try:
                     self.connection.enable()
                     logging.info(f"{self.hostname} : Entered enable mode")
-                    return True  
+                    return True
                 except Exception as e:
                     err = (f"{self.hostname} : Failed to enter enable mode")
                     self.logging_error(err, e)
@@ -113,8 +113,37 @@ class Routers:
             self.logging_error(err, e)
             return "Function exception"
 
+    def parse(self, command, output, num_try):
+        try:
+            parsed_output = parse_output(platform=self.ios_os, command=f'{command} {num_try}', data=output)
+            if parsed_output == []:
+                err = (f"{self.hostname} : [{num_try}] Parsing empty for template '{command} {num_try}'")
+                self.logging_error(err)
+                return ""
+            else:
+                logging.info(f"{self.hostname} : [{num_try}] Parsing success for template '{command} {num_try}'")
+                return parsed_output
+        except Exception as e:
+            err = (f"{self.hostname} : [{num_try}] Parsing exception for template '{command} {num_try}'")
+            self.logging_error(err, e)
+            return ""
 
-    def export_data(self, command, output):
+    def export_data(self, final, type=""):
+        try:
+            with open(f"{self.out_path}{self.command_template}_{TIMESTAMP}.csv", mode="a", newline="") as csvfile:
+                csvwriter = csv.writer(csvfile)
+                if type == "crc" or type == "cdp" or type == "inventory":
+                    for fin in final:
+                        csvwriter.writerow(fin)
+                else:
+                    csvwriter.writerow(final)
+                logging.info(f"{self.hostname} : Export success to {self.out_path}{self.command_template}_{TIMESTAMP}.csv")
+        except Exception as e:
+            err = (f"{self.hostname} : Export failed to {self.out_path}{self.command_template}_{TIMESTAMP}.csv")
+            self.logging_error(err, e)
+  
+
+    def export_data_custom(self, command, output):
         try:
             with open(f"{self.out_path}{self.hostname}_custom_{TIMESTAMP}.txt", mode="a") as txtfile:
                 txtfile.write('\n---------------------------------------------------------------------------\n')
@@ -127,5 +156,3 @@ class Routers:
             err = (f"{self.hostname} : failed exporting command to {command}")
             self.logging_error(err, e)
 
-
-  

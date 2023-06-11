@@ -1,0 +1,33 @@
+2023-06-11 10:53:14,809 [INFO] xe2 : Connecting 
+2023-06-11 10:53:14,809 [INFO] xe1 : Connecting 
+2023-06-11 10:53:14,809 [INFO] xr1 : Connecting 
+2023-06-11 10:53:14,875 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:14,875 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 10:53:15,063 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 10:53:15,590 [INFO] Authentication (password) successful!
+2023-06-11 10:53:15,638 [INFO] Authentication (password) successful!
+2023-06-11 10:53:15,657 [INFO] Authentication (password) successful!
+2023-06-11 10:53:15,965 [WARNING] xe1 : Connect success
+2023-06-11 10:53:16,013 [WARNING] xe2 : Connect success
+2023-06-11 10:53:16,201 [INFO] xe2 : Entered enable mode
+2023-06-11 10:53:16,220 [WARNING] xr1 : Connect success
+2023-06-11 10:53:16,385 [INFO] xe2 : Command 'show environment' sent
+2023-06-11 10:53:16,387 [ERROR] xe2 : Command [show environment] Failed, trying [show env all]
+2023-06-11 10:53:16,465 [INFO] xr1 : Entered enable mode
+2023-06-11 10:53:16,519 [INFO] xe2 : Command 'show env all' sent
+2023-06-11 10:53:16,520 [ERROR] xe2 : Output return empty for command [show env all]
+2023-06-11 10:53:16,521 [ERROR] xe2 : Parsing failed after [0] tries.
+2023-06-11 10:53:16,559 [INFO] xe2 : Disconnected succcessfully
+2023-06-11 10:53:16,682 [INFO] xr1 : Command 'show environment' sent
+2023-06-11 10:53:16,683 [ERROR] xr1 : Command [show environment] Failed, trying [show env all]
+2023-06-11 10:53:16,848 [INFO] xr1 : Command 'show env all' sent
+2023-06-11 10:53:16,850 [ERROR] xr1 : Output return empty for command [show env all]
+2023-06-11 10:53:16,851 [ERROR] xr1 : Parsing failed after [0] tries.
+2023-06-11 10:53:16,890 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 10:53:17,182 [INFO] xe1 : Entered enable mode
+2023-06-11 10:53:17,344 [INFO] xe1 : Command 'show environment' sent
+2023-06-11 10:53:17,345 [ERROR] xe1 : Command [show environment] Failed, trying [show env all]
+2023-06-11 10:53:17,476 [INFO] xe1 : Command 'show env all' sent
+2023-06-11 10:53:17,477 [ERROR] xe1 : Output return empty for command [show env all]
+2023-06-11 10:53:17,478 [ERROR] xe1 : Parsing failed after [0] tries.
+2023-06-11 10:53:17,514 [INFO] xe1 : Disconnected succcessfully

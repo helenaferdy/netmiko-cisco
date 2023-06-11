@@ -1,15 +1,15 @@
-from lib.getCPU.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP
 import csv
 import threading
 import os
 import yaml
 
+TITLE = "getCPU"
 COMMAND1 = "show processes cpu"
 COMMAND2 = "show processes cpu"
 HEADERS = ['No', 'Device', 'CPU Used', 'CPU Free', 'Category']
 ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
-OUTPATH = "out/getCPU/"
 TEMPLATE_NUMBERS = 4
 devices = []
 success_counter = []
@@ -33,6 +33,10 @@ def main():
 def process_device(device, i):
     parsed = ""
     num_try = 0
+    device.command_template = COMMAND1
+    device.out_path = f"out/{TITLE}/"
+    device.log_path = f"log/{TITLE}.log"
+    device.errorlog = f"log/error/{TITLE}-error.log"
     device.create_folder()
     if device.connect(i):
         command = COMMAND1
@@ -57,20 +61,24 @@ def process_device(device, i):
         #special templates
         if parsed != "":
             if num_try == 3:
-                device.export_csv_3(parsed)
+                final = export_csv_3(parsed, i, device.hostname)
+                device.export_data(final)
             else:
-                device.export_csv(parsed)
-            success_counter.append(device.hostname)
+                final = export_csv(parsed, i, device.hostname)
+                device.export_data(final)
+
+            success_counter.append(0)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
 
         device.disconnect()
 
 def export_headers():
-    if not os.path.exists(OUTPATH):
-        os.makedirs(OUTPATH)
+    outpath = f'out/{TITLE}/'
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
-    with open(f"{OUTPATH}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
+    with open(f"{outpath}{COMMAND1}_{TIMESTAMP}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(HEADERS)
 
@@ -92,7 +100,48 @@ def read_testbed():
                 the_password,
                 the_enable,
                 the_ios_os,
-                the_protocol,
-                COMMAND1
+                the_protocol
             )
             devices.append(new_device)
+
+#universal template
+def export_csv(parsed, i, hostname):
+    cpu_load = 0
+    for p in parsed:
+        cpu_load = int(p['cpu_5_min'])
+        if cpu_load <= 40:
+            category = 'LOW'
+        elif cpu_load <= 70:
+            category = 'MEDIUM'
+        elif cpu_load <= 85:
+            category = 'HIGH'
+        else:
+            category = 'CRITICAL'
+
+    free_load = str(100 - cpu_load) + '%'
+    cpu_load = str(cpu_load) + '%'
+    
+    final = [i, hostname, cpu_load, free_load, category]
+    return final
+
+#template no 3
+def export_csv_3(parsed, i, hostname):
+    cpu_load = 0
+    for p in parsed:
+        cpu_load = float(p['user']) + float(p['kernel'])
+        free_load = float(p['user'])
+
+    if cpu_load <= 40:
+        category = 'LOW'
+    elif cpu_load <= 70:
+        category = 'MEDIUM'
+    elif cpu_load <= 85:
+        category = 'HIGH'
+    else:
+        category = 'CRITICAL'
+
+    free_load = p['user']+'%'
+    cpu_load = str(round(cpu_load,2)) + '%'
+    
+    final = [i, hostname, cpu_load, free_load, category]
+    return final

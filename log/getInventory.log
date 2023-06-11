@@ -1,27 +1,27 @@
-2023-06-11 10:52:47,632 [INFO] xe2 : Connecting 
-2023-06-11 10:52:47,632 [INFO] xe1 : Connecting 
-2023-06-11 10:52:47,633 [INFO] xr1 : Connecting 
-2023-06-11 10:52:47,693 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:52:47,718 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:52:47,942 [INFO] Connected (version 2.0, client Cisco-2.0)
-2023-06-11 10:52:48,335 [INFO] Authentication (password) successful!
-2023-06-11 10:52:48,378 [INFO] Authentication (password) successful!
-2023-06-11 10:52:48,697 [INFO] Authentication (password) successful!
-2023-06-11 10:52:48,921 [WARNING] xe1 : Connect success
-2023-06-11 10:52:48,921 [WARNING] xe2 : Connect success
-2023-06-11 10:52:49,184 [INFO] xe2 : Entered enable mode
-2023-06-11 10:52:49,205 [INFO] xe1 : Entered enable mode
-2023-06-11 10:52:49,351 [INFO] xe1 : Command 'show inventory' sent
-2023-06-11 10:52:49,361 [INFO] xe1 : [1] Parsing success for template 'show inventory 1'
-2023-06-11 10:52:49,362 [INFO] xe2 : Command 'show inventory' sent
-2023-06-11 10:52:49,362 [INFO] xe1 : Export success to out/getInventory/show inventory_2023-06-11_10-52.csv
-2023-06-11 10:52:49,363 [INFO] xe2 : [1] Parsing success for template 'show inventory 1'
-2023-06-11 10:52:49,364 [INFO] xe2 : Export success to out/getInventory/show inventory_2023-06-11_10-52.csv
-2023-06-11 10:52:49,388 [INFO] xe1 : Disconnected succcessfully
-2023-06-11 10:52:49,400 [INFO] xe2 : Disconnected succcessfully
-2023-06-11 10:52:49,514 [WARNING] xr1 : Connect success
-2023-06-11 10:52:49,565 [INFO] xr1 : Entered enable mode
-2023-06-11 10:52:49,951 [INFO] xr1 : Command 'show inventory' sent
-2023-06-11 10:52:49,957 [INFO] xr1 : [1] Parsing success for template 'show inventory 1'
-2023-06-11 10:52:49,958 [INFO] xr1 : Export success to out/getInventory/show inventory_2023-06-11_10-52.csv
-2023-06-11 10:52:49,984 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 11:56:54,152 [INFO] xe1 : Connecting 
+2023-06-11 11:56:54,152 [INFO] xr1 : Connecting 
+2023-06-11 11:56:54,152 [INFO] xe2 : Connecting 
+2023-06-11 11:56:54,208 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:56:54,208 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:56:54,415 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 11:56:54,657 [INFO] Authentication (password) successful!
+2023-06-11 11:56:54,866 [INFO] Authentication (password) successful!
+2023-06-11 11:56:55,050 [WARNING] xe2 : Connect success
+2023-06-11 11:56:55,062 [INFO] Authentication (password) successful!
+2023-06-11 11:56:55,246 [WARNING] xe1 : Connect success
+2023-06-11 11:56:55,470 [INFO] xe1 : Entered enable mode
+2023-06-11 11:56:55,535 [WARNING] xr1 : Connect success
+2023-06-11 11:56:55,571 [INFO] xr1 : Entered enable mode
+2023-06-11 11:56:55,611 [INFO] xe1 : Command 'show inventory' sent
+2023-06-11 11:56:55,623 [INFO] xe1 : [1] Parsing success for template 'show inventory 1'
+2023-06-11 11:56:55,623 [INFO] xe1 : Export success to out/getInventory/show inventory_2023-06-11_11-56.csv
+2023-06-11 11:56:55,662 [INFO] xe1 : Disconnected succcessfully
+2023-06-11 11:56:56,331 [INFO] xe2 : Entered enable mode
+2023-06-11 11:56:56,372 [INFO] xr1 : Command 'show inventory' sent
+2023-06-11 11:56:56,378 [INFO] xr1 : [1] Parsing success for template 'show inventory 1'
+2023-06-11 11:56:56,378 [INFO] xr1 : Export success to out/getInventory/show inventory_2023-06-11_11-56.csv
+2023-06-11 11:56:56,416 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 11:56:56,487 [INFO] xe2 : Command 'show inventory' sent
+2023-06-11 11:56:56,490 [INFO] xe2 : [1] Parsing success for template 'show inventory 1'
+2023-06-11 11:56:56,491 [INFO] xe2 : Export success to out/getInventory/show inventory_2023-06-11_11-56.csv
+2023-06-11 11:56:56,541 [INFO] xe2 : Disconnected succcessfully

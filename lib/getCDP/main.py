@@ -1,4 +1,4 @@
-from lib.getCustom.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP, ERROR_COMMAND
 import csv
 import threading
 import os
@@ -9,7 +9,6 @@ COMMAND1 = "show cdp neighbors"
 COMMAND2 = "show cdp neighbor"
 COMMAND_PLATFORM = "show platform"
 HEADERS = ['No', 'Local Hostname', 'Local Interface', 'Local Platform', 'Remote Hostname', 'Remote Interface', 'Remote Platform', 'Capability']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 TEMPLATE_NUMBERS = 1
 TEMPLATE_NUMBERS_PLATFORM = 2

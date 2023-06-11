@@ -1,16 +1,4 @@
 No,Hostname,Interface,CRC,Input Errors,Output Errors
-1,xe1,GigabitEthernet1,0,0,0
-1,xe1,GigabitEthernet2,0,0,0
-1,xe1,GigabitEthernet3,0,0,0
-1,xe1,GigabitEthernet4,0,0,0
-1,xe1,GigabitEthernet5,0,0,0
-1,xe1,GigabitEthernet6,0,0,0
-1,xe1,GigabitEthernet7,0,0,0
-1,xe1,Loopback0,0,0,0
-2,xe2,GigabitEthernet1,0,0,0
-2,xe2,GigabitEthernet2,0,0,0
-2,xe2,GigabitEthernet3,0,0,0
-2,xe2,Loopback0,0,0,0
 3,xr1,Null0,,,
 3,xr1,MgmtEth0/RP0/CPU0/0,0,0,0
 3,xr1,GigabitEthernet0/0/0/0,0,0,0
@@ -20,3 +8,15 @@ No,Hostname,Interface,CRC,Input Errors,Output Errors
 3,xr1,GigabitEthernet0/0/0/4,0,0,0
 3,xr1,GigabitEthernet0/0/0/5,0,0,0
 3,xr1,GigabitEthernet0/0/0/6,0,0,0
+2,xe2,GigabitEthernet1,0,0,0
+2,xe2,GigabitEthernet2,0,0,0
+2,xe2,GigabitEthernet3,0,0,0
+2,xe2,Loopback0,0,0,0
+1,xe1,GigabitEthernet1,0,0,0
+1,xe1,GigabitEthernet2,0,0,0
+1,xe1,GigabitEthernet3,0,0,0
+1,xe1,GigabitEthernet4,0,0,0
+1,xe1,GigabitEthernet5,0,0,0
+1,xe1,GigabitEthernet6,0,0,0
+1,xe1,GigabitEthernet7,0,0,0
+1,xe1,Loopback0,0,0,0

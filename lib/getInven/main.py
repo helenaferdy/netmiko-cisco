@@ -1,4 +1,4 @@
-from lib.getCustom.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP, ERROR_COMMAND
 import csv
 import threading
 import os
@@ -8,7 +8,6 @@ TITLE = "getInventory"
 COMMAND1 = "show inventory"
 COMMAND2 = "show inventory"
 HEADERS = ['No_Hostname', 'Hostname', 'No_Inventory', 'Name', 'PID', 'SN']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 TEMPLATE_NUMBERS = 2
 devices = []

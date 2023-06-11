@@ -1,10 +1,9 @@
-from lib.getCustom.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, ERROR_COMMAND
 import threading
 import os
 import yaml
 
 TITLE = "getCustom"
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 CUSTOM_FILE = "import/custom.txt"
 devices = []

@@ -1,4 +1,4 @@
-from lib.getCustom.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP, ERROR_COMMAND
 import csv
 import threading
 import os
@@ -8,7 +8,6 @@ TITLE = "getCRC"
 COMMAND1 = "show interfaces"
 COMMAND2 = "show int"
 HEADERS = ['No', 'Hostname', 'Interface', 'CRC', 'Input Errors', 'Output Errors']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 TEMPLATE_NUMBERS = 1
 devices = []

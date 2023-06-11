@@ -1,30 +1,30 @@
-2023-06-11 10:52:32,100 [INFO] xr1 : Connecting 
-2023-06-11 10:52:32,101 [INFO] xe2 : Connecting 
-2023-06-11 10:52:32,101 [INFO] xe1 : Connecting 
-2023-06-11 10:52:32,162 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:52:32,165 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:52:32,340 [INFO] Connected (version 2.0, client Cisco-2.0)
-2023-06-11 10:52:32,592 [INFO] Authentication (password) successful!
-2023-06-11 10:52:32,862 [INFO] Authentication (password) successful!
-2023-06-11 10:52:32,939 [INFO] Authentication (password) successful!
-2023-06-11 10:52:33,610 [WARNING] xe2 : Connect success
-2023-06-11 10:52:33,919 [WARNING] xe1 : Connect success
-2023-06-11 10:52:33,931 [INFO] xe2 : Entered enable mode
-2023-06-11 10:52:34,127 [INFO] xe1 : Entered enable mode
-2023-06-11 10:52:34,234 [INFO] xe2 : Command 'show processes cpu' sent
-2023-06-11 10:52:34,241 [INFO] xe2 : [1] Parsing success for template 'show processes cpu 1'
-2023-06-11 10:52:34,241 [INFO] xe2 : Export success to out/getCPU/show processes cpu_2023-06-11_10-52.csv
-2023-06-11 10:52:34,267 [INFO] xe2 : Disconnected succcessfully
-2023-06-11 10:52:34,352 [WARNING] xr1 : Connect success
-2023-06-11 10:52:34,378 [INFO] xr1 : Entered enable mode
-2023-06-11 10:52:34,843 [INFO] xr1 : Command 'show processes cpu' sent
-2023-06-11 10:52:34,848 [ERROR] xr1 : [1] Parsing empty for template 'show processes cpu 1'
-2023-06-11 10:52:34,852 [ERROR] xr1 : [2] Parsing empty for template 'show processes cpu 2'
-2023-06-11 10:52:34,854 [ERROR] xr1 : [3] Parsing empty for template 'show processes cpu 3'
-2023-06-11 10:52:34,856 [INFO] xr1 : [4] Parsing success for template 'show processes cpu 4'
-2023-06-11 10:52:34,856 [INFO] xr1 : Export success to out/getCPU/show processes cpu_2023-06-11_10-52.csv
-2023-06-11 10:52:34,882 [INFO] xr1 : Disconnected succcessfully
-2023-06-11 10:52:35,259 [INFO] xe1 : Command 'show processes cpu' sent
-2023-06-11 10:52:35,265 [INFO] xe1 : [1] Parsing success for template 'show processes cpu 1'
-2023-06-11 10:52:35,266 [INFO] xe1 : Export success to out/getCPU/show processes cpu_2023-06-11_10-52.csv
-2023-06-11 10:52:35,301 [INFO] xe1 : Disconnected succcessfully
+2023-06-11 11:56:34,299 [INFO] xe2 : Connecting 
+2023-06-11 11:56:34,299 [INFO] xr1 : Connecting 
+2023-06-11 11:56:34,299 [INFO] xe1 : Connecting 
+2023-06-11 11:56:34,354 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:56:34,357 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:56:34,522 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 11:56:34,810 [INFO] Authentication (password) successful!
+2023-06-11 11:56:35,148 [INFO] Authentication (password) successful!
+2023-06-11 11:56:35,287 [WARNING] xe2 : Connect success
+2023-06-11 11:56:35,526 [INFO] xe2 : Entered enable mode
+2023-06-11 11:56:35,553 [WARNING] xr1 : Connect success
+2023-06-11 11:56:35,674 [INFO] xr1 : Entered enable mode
+2023-06-11 11:56:36,059 [INFO] xe2 : Command 'show processes cpu' sent
+2023-06-11 11:56:36,070 [INFO] xe2 : [1] Parsing success for template 'show processes cpu 1'
+2023-06-11 11:56:36,071 [INFO] xe2 : Export success to out/getCPU/show processes cpu_2023-06-11_11-56.csv
+2023-06-11 11:56:36,107 [INFO] xe2 : Disconnected succcessfully
+2023-06-11 11:56:36,227 [INFO] xr1 : Command 'show processes cpu' sent
+2023-06-11 11:56:36,232 [ERROR] xr1 : [1] Parsing empty for template 'show processes cpu 1'
+2023-06-11 11:56:36,235 [ERROR] xr1 : [2] Parsing empty for template 'show processes cpu 2'
+2023-06-11 11:56:36,237 [ERROR] xr1 : [3] Parsing empty for template 'show processes cpu 3'
+2023-06-11 11:56:36,238 [INFO] xr1 : [4] Parsing success for template 'show processes cpu 4'
+2023-06-11 11:56:36,239 [INFO] xr1 : Export success to out/getCPU/show processes cpu_2023-06-11_11-56.csv
+2023-06-11 11:56:36,277 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 11:56:44,244 [INFO] Authentication (password) successful!
+2023-06-11 11:56:44,765 [WARNING] xe1 : Connect success
+2023-06-11 11:56:46,304 [INFO] xe1 : Entered enable mode
+2023-06-11 11:56:46,698 [INFO] xe1 : Command 'show processes cpu' sent
+2023-06-11 11:56:46,707 [INFO] xe1 : [1] Parsing success for template 'show processes cpu 1'
+2023-06-11 11:56:46,707 [INFO] xe1 : Export success to out/getCPU/show processes cpu_2023-06-11_11-56.csv
+2023-06-11 11:56:46,743 [INFO] xe1 : Disconnected succcessfully

@@ -1,54 +1,54 @@
-2023-06-11 10:53:24,116 [INFO] xr1 : Connecting 
-2023-06-11 10:53:24,116 [INFO] xe1 : Connecting 
-2023-06-11 10:53:24,116 [INFO] xe2 : Connecting 
-2023-06-11 10:53:24,167 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:53:24,167 [INFO] Connected (version 2.0, client Cisco-1.25)
-2023-06-11 10:53:24,344 [INFO] Connected (version 2.0, client Cisco-2.0)
-2023-06-11 10:53:24,622 [INFO] Authentication (password) successful!
-2023-06-11 10:53:24,856 [INFO] Authentication (password) successful!
-2023-06-11 10:53:24,985 [INFO] Authentication (password) successful!
-2023-06-11 10:53:25,027 [WARNING] xe1 : Connect success
-2023-06-11 10:53:25,241 [INFO] xe1 : Entered enable mode
-2023-06-11 10:53:25,329 [WARNING] xe2 : Connect success
-2023-06-11 10:53:25,415 [INFO] xe1 : Command 'show ip interface brief' sent
-2023-06-11 10:53:25,416 [INFO] xe1 : success exporting command to show ip interface brief
-2023-06-11 10:53:25,539 [WARNING] xr1 : Connect success
-2023-06-11 10:53:25,543 [INFO] xe2 : Entered enable mode
-2023-06-11 10:53:25,553 [INFO] xr1 : Entered enable mode
-2023-06-11 10:53:25,620 [INFO] xe1 : Command 'show' sent
-2023-06-11 10:53:25,622 [ERROR] xe1 : Output return empty for command [show]
-2023-06-11 10:53:25,685 [INFO] xe2 : Command 'show ip interface brief' sent
-2023-06-11 10:53:25,686 [INFO] xe2 : success exporting command to show ip interface brief
-2023-06-11 10:53:25,792 [INFO] xe1 : Command 'show ip ospf neighbor' sent
-2023-06-11 10:53:25,793 [INFO] xe1 : success exporting command to show ip ospf neighbor
-2023-06-11 10:53:25,803 [INFO] xe2 : Command 'show' sent
-2023-06-11 10:53:25,804 [ERROR] xe2 : Output return empty for command [show]
-2023-06-11 10:53:25,935 [INFO] xr1 : Command 'show ip interface brief' sent
-2023-06-11 10:53:25,936 [INFO] xr1 : success exporting command to show ip interface brief
-2023-06-11 10:53:25,947 [INFO] xe1 : Command 'show vlan brief' sent
-2023-06-11 10:53:25,948 [ERROR] xe1 : Output return empty for command [show vlan brief]
-2023-06-11 10:53:25,994 [INFO] xe2 : Command 'show ip ospf neighbor' sent
-2023-06-11 10:53:25,995 [INFO] xe2 : success exporting command to show ip ospf neighbor
-2023-06-11 10:53:26,109 [INFO] xe1 : Command 'show cdp neighbor' sent
-2023-06-11 10:53:26,108 [INFO] xr1 : Command 'show' sent
-2023-06-11 10:53:26,109 [INFO] xe1 : success exporting command to show cdp neighbor
-2023-06-11 10:53:26,110 [ERROR] xr1 : Output return empty for command [show]
-2023-06-11 10:53:26,153 [INFO] xe2 : Command 'show vlan brief' sent
-2023-06-11 10:53:26,154 [ERROR] xe2 : Output return empty for command [show vlan brief]
-2023-06-11 10:53:26,280 [INFO] xe1 : Command 'show p' sent
-2023-06-11 10:53:26,281 [ERROR] xe1 : Output return empty for command [show p]
-2023-06-11 10:53:26,308 [INFO] xe1 : Disconnected succcessfully
-2023-06-11 10:53:26,334 [INFO] xe2 : Command 'show cdp neighbor' sent
-2023-06-11 10:53:26,334 [INFO] xe2 : success exporting command to show cdp neighbor
-2023-06-11 10:53:26,388 [INFO] xr1 : Command 'show ip ospf neighbor' sent
-2023-06-11 10:53:26,388 [INFO] xr1 : success exporting command to show ip ospf neighbor
-2023-06-11 10:53:26,522 [INFO] xe2 : Command 'show p' sent
-2023-06-11 10:53:26,523 [ERROR] xe2 : Output return empty for command [show p]
-2023-06-11 10:53:26,549 [INFO] xe2 : Disconnected succcessfully
-2023-06-11 10:53:26,580 [INFO] xr1 : Command 'show vlan brief' sent
-2023-06-11 10:53:26,581 [ERROR] xr1 : Output return empty for command [show vlan brief]
-2023-06-11 10:53:27,144 [INFO] xr1 : Command 'show cdp neighbor' sent
-2023-06-11 10:53:27,145 [INFO] xr1 : success exporting command to show cdp neighbor
-2023-06-11 10:53:27,251 [INFO] xr1 : Command 'show p' sent
-2023-06-11 10:53:27,252 [ERROR] xr1 : Output return empty for command [show p]
-2023-06-11 10:53:27,279 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 11:58:40,002 [INFO] xe2 : Connecting 
+2023-06-11 11:58:40,002 [INFO] xe1 : Connecting 
+2023-06-11 11:58:40,002 [INFO] xr1 : Connecting 
+2023-06-11 11:58:40,057 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:58:40,224 [INFO] Connected (version 2.0, client Cisco-2.0)
+2023-06-11 11:58:40,502 [INFO] Authentication (password) successful!
+2023-06-11 11:58:40,824 [INFO] Authentication (password) successful!
+2023-06-11 11:58:41,541 [WARNING] xr1 : Connect success
+2023-06-11 11:58:41,580 [INFO] xr1 : Entered enable mode
+2023-06-11 11:58:41,907 [INFO] xr1 : Command 'show ip interface brief' sent
+2023-06-11 11:58:41,908 [INFO] xr1 : success exporting command to show ip interface brief
+2023-06-11 11:58:41,915 [WARNING] xe2 : Connect success
+2023-06-11 11:58:42,083 [INFO] xr1 : Command 'show' sent
+2023-06-11 11:58:42,085 [ERROR] xr1 : Output return empty for command [show]
+2023-06-11 11:58:42,273 [INFO] xe2 : Entered enable mode
+2023-06-11 11:58:42,469 [INFO] xe2 : Command 'show ip interface brief' sent
+2023-06-11 11:58:42,470 [INFO] xe2 : success exporting command to show ip interface brief
+2023-06-11 11:58:42,529 [INFO] xr1 : Command 'show ip ospf neighbor' sent
+2023-06-11 11:58:42,530 [INFO] xr1 : success exporting command to show ip ospf neighbor
+2023-06-11 11:58:42,598 [INFO] xe2 : Command 'show' sent
+2023-06-11 11:58:42,599 [ERROR] xe2 : Output return empty for command [show]
+2023-06-11 11:58:42,638 [INFO] xr1 : Command 'show vlan brief' sent
+2023-06-11 11:58:42,639 [ERROR] xr1 : Output return empty for command [show vlan brief]
+2023-06-11 11:58:42,677 [INFO] Connected (version 2.0, client Cisco-1.25)
+2023-06-11 11:58:42,769 [INFO] xe2 : Command 'show ip ospf neighbor' sent
+2023-06-11 11:58:42,770 [INFO] xe2 : success exporting command to show ip ospf neighbor
+2023-06-11 11:58:42,932 [INFO] xe2 : Command 'show vlan brief' sent
+2023-06-11 11:58:42,933 [ERROR] xe2 : Output return empty for command [show vlan brief]
+2023-06-11 11:58:43,079 [INFO] xe2 : Command 'show cdp neighbor' sent
+2023-06-11 11:58:43,080 [INFO] xe2 : success exporting command to show cdp neighbor
+2023-06-11 11:58:43,119 [INFO] xr1 : Command 'show cdp neighbor' sent
+2023-06-11 11:58:43,120 [INFO] xr1 : success exporting command to show cdp neighbor
+2023-06-11 11:58:43,222 [INFO] xe2 : Command 'show p' sent
+2023-06-11 11:58:43,224 [ERROR] xe2 : Output return empty for command [show p]
+2023-06-11 11:58:43,273 [INFO] xe2 : Disconnected succcessfully
+2023-06-11 11:58:43,291 [INFO] xr1 : Command 'show p' sent
+2023-06-11 11:58:43,292 [ERROR] xr1 : Output return empty for command [show p]
+2023-06-11 11:58:43,331 [INFO] xr1 : Disconnected succcessfully
+2023-06-11 11:58:43,356 [INFO] Authentication (password) successful!
+2023-06-11 11:58:43,742 [WARNING] xe1 : Connect success
+2023-06-11 11:58:44,082 [INFO] xe1 : Entered enable mode
+2023-06-11 11:58:44,254 [INFO] xe1 : Command 'show ip interface brief' sent
+2023-06-11 11:58:44,255 [INFO] xe1 : success exporting command to show ip interface brief
+2023-06-11 11:58:44,453 [INFO] xe1 : Command 'show' sent
+2023-06-11 11:58:44,454 [ERROR] xe1 : Output return empty for command [show]
+2023-06-11 11:58:45,627 [INFO] xe1 : Command 'show ip ospf neighbor' sent
+2023-06-11 11:58:45,628 [INFO] xe1 : success exporting command to show ip ospf neighbor
+2023-06-11 11:58:45,773 [INFO] xe1 : Command 'show vlan brief' sent
+2023-06-11 11:58:45,774 [ERROR] xe1 : Output return empty for command [show vlan brief]
+2023-06-11 11:58:45,908 [INFO] xe1 : Command 'show cdp neighbor' sent
+2023-06-11 11:58:45,909 [INFO] xe1 : success exporting command to show cdp neighbor
+2023-06-11 11:58:46,057 [INFO] xe1 : Command 'show p' sent
+2023-06-11 11:58:46,059 [ERROR] xe1 : Output return empty for command [show p]
+2023-06-11 11:58:46,094 [INFO] xe1 : Disconnected succcessfully

@@ -20,11 +20,11 @@ show ip ospf neighbor
 ---------------------------------------------------------------------------
 
 Neighbor ID     Pri   State           Dead Time   Address         Interface
-1.1.2.2           1   FULL/DR         00:00:35    2.2.12.2        GigabitEthernet3
-198.18.0.31       1   FULL/BDR        00:00:39    123.0.0.1       GigabitEthernet6
-90.0.0.2          1   FULL/BDR        00:00:32    100.0.0.2       GigabitEthernet5
-196.10.0.1        1   FULL/DR         00:00:32    120.0.0.2       GigabitEthernet4
-198.18.0.161      1   FULL/DR         00:00:32    110.0.0.2       GigabitEthernet2
+1.1.2.2           1   FULL/DR         00:00:32    2.2.12.2        GigabitEthernet3
+198.18.0.31       1   FULL/BDR        00:00:32    123.0.0.1       GigabitEthernet6
+90.0.0.2          1   FULL/BDR        00:00:35    100.0.0.2       GigabitEthernet5
+196.10.0.1        1   FULL/DR         00:00:30    120.0.0.2       GigabitEthernet4
+198.18.0.161      1   FULL/DR         00:00:39    110.0.0.2       GigabitEthernet2
 ---------------------------------------------------------------------------
 
 
@@ -37,13 +37,13 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   D - Remote, C - CVTA, M - Two-port Mac Relay 
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-xe5              Gig 6             161              R I   CSR1000V  Gig 1
-xe4              Gig 6             147              R I   CSR1000V  Gig 1
-xe3              Gig 6             139              R I   CSR1000V  Gig 1
-xe2              Gig 6             136              R I   CSR1000V  Gig 1
+xe5              Gig 6             135              R I   CSR1000V  Gig 1
+xe4              Gig 6             167              R I   CSR1000V  Gig 1
+xe3              Gig 6             133              R I   CSR1000V  Gig 1
+xe2              Gig 6             144              R I   CSR1000V  Gig 1
 UCSM-A(SSI17360D2Y)
-                 Gig 6             156             S I C  UCS-FI-62 Vethernet867
-xr1              Gig 6             133               R    IOS-XRv 9 Gig 0/0/0/0
+                 Gig 6             137             S I C  UCS-FI-62 Vethernet867
+xr1              Gig 6             173               R    IOS-XRv 9 Gig 0/0/0/0
 
 Total cdp entries displayed : 6
 ---------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-from lib.getCustom.device import Routers, TIMESTAMP
+from lib.getCustom.device import Routers, TIMESTAMP, ERROR_COMMAND
 import csv
 import threading
 import os
@@ -8,7 +8,6 @@ TITLE = "getCPU"
 COMMAND1 = "show processes cpu"
 COMMAND2 = "show processes cpu"
 HEADERS = ['No', 'Device', 'CPU Used', 'CPU Free', 'Category']
-ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', "Function exception"]
 TESTBED =  "testbed/device.yaml"
 TEMPLATE_NUMBERS = 4
 devices = []

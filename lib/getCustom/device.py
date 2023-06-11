@@ -6,6 +6,7 @@ import logging, sys
 import datetime
 
 CONNECT_RETRY = 2
+ERROR_COMMAND = ['Invalid input', 'No such process', 'Incomplete command', 'Unknown command', 'Ambiguous command', 'list of subcommands', "Function exception"]
 TIMESTAMP = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')
 os.environ["NTC_TEMPLATES_DIR"] = "lib/getCustom/templates"
 
@@ -79,20 +80,25 @@ class Routers:
         
         self.logging(f"{self.hostname} : Connecting ")
         retry = 0
+        retry_enable = 0
         while retry < CONNECT_RETRY:
             if retry > 0:
                 logging.warning(f"{self.hostname} : Retrying connection")
             try:
                 self.connection = ConnectHandler(**device)
                 logging.warning(f"{self.hostname} : Connect success")
-                retry = 2
-                try:
-                    self.connection.enable()
-                    logging.info(f"{self.hostname} : Entered enable mode")
-                    return True
-                except Exception as e:
-                    err = (f"{self.hostname} : Failed to enter enable mode")
-                    self.logging_error(err, e)
+                while retry_enable < CONNECT_RETRY:
+                    if retry_enable > 0:
+                        logging.warning(f"{self.hostname} : Retrying entering enable mode")
+                    try:
+                        self.connection.enable()
+                        logging.info(f"{self.hostname} : Entered enable mode")
+                        return True
+                    except Exception as e:
+                        retry_enable += 1
+                        err = (f"{self.hostname} : Failed to enter enable mode ({retry_enable})")
+                        self.logging_error(err, e)
+                return True
             except Exception as e:
                 retry +=1
                 err = (f"{self.hostname} : Connect Failed ({retry})")

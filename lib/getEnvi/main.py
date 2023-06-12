@@ -12,6 +12,7 @@ TESTBED =  "testbed/device.yaml"
 TEMPLATE_NUMBERS = 5
 devices = []
 success_counter = []
+fail_counter = []
 
 def main():
     read_testbed()
@@ -27,7 +28,7 @@ def main():
     for t in threads:
         t.join()
 
-    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
+    end_summary()
 
 def process_device(device, i):
     parsed = ""
@@ -68,8 +69,11 @@ def process_device(device, i):
             success_counter.append(0)
         else:
             device.logging_error(f"{device.hostname} : Parsing failed after [{num_try}] tries.")
+            fail_counter.append(f'{device.ip} - {device.ios_os} - {device.hostname}')
 
         device.disconnect()
+    else:
+        fail_counter.append(f'{device.ip} - {device.ios_os} - {device.hostname}')
 
 def export_headers():
     outpath = f'out/{TITLE}/'
@@ -101,6 +105,15 @@ def read_testbed():
                 the_protocol
             )
             devices.append(new_device)
+
+def end_summary():
+    print(f'\n=> Success : [{len(success_counter)}/{len(devices)}]\n')
+    if len(fail_counter) > 0:
+        print(f'=> Failed  :')
+        for idx, fc in enumerate(fail_counter):
+            print(f'   {idx+1}. {fc}')
+        print('')
+
 
 #universal template
 def export_csv(parsed, i, hostname):

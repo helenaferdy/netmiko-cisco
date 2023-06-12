@@ -9,6 +9,7 @@ CUSTOM_FILE = "import/custom.txt"
 devices = []
 custom_commands = []
 success_counter = []
+fail_counter = []
 
 def main():
     read_testbed()
@@ -25,7 +26,7 @@ def main():
     for t in threads:
         t.join()
 
-    print(f'\n=========> [{len(success_counter)}/{len(devices)}] devices successfully executed\n')
+    end_summary()
 
 def process_device(device, i):
     device.out_path = f"out/{TITLE}/"
@@ -45,6 +46,8 @@ def process_device(device, i):
                 device.export_data_custom(command, output)
 
         device.disconnect()
+    else:
+        fail_counter.append(f'{device.ip} - {device.ios_os} - {device.hostname}')
 
 
 def read_testbed():
@@ -69,10 +72,21 @@ def read_testbed():
             )
             devices.append(new_device)
 
+
+def end_summary():
+    print(f'\n=> Success : [{len(success_counter)}/{len(devices)}]\n')
+    if len(fail_counter) > 0:
+        print(f'=> Failed  :')
+        for idx, fc in enumerate(fail_counter):
+            print(f'   {idx+1}. {fc}')
+        print('')
+        
+
 def create_folder_1():
     outpath = f'out/{TITLE}/'
     if not os.path.exists(outpath):
         os.makedirs(outpath)
+
 
 def read_custom_commands():
     with open(CUSTOM_FILE, "r") as f:

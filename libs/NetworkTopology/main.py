@@ -1,8 +1,9 @@
 from pyvis.network import Network
-from libs.NetworkTopology.device import Device
+from libs.NetworkTopology.nettop import Device
 import csv
 import os
 import re
+import subprocess
 
 CDP_PATH = "out/getCDP/"
 CURRENT_PATH = "libs/NetworkTopology/"
@@ -74,9 +75,8 @@ def extract_cdp(cdp_file):
         writer.writerows(extracted_data)
 
 
-
 def create_topology():
-    net = Network(height='1000px', width='100%', bgcolor='#222222', font_color='white')
+    net = Network(height='1000px', width='100%', bgcolor='#222222', font_color='white', notebook=True)
     # net.show_buttons(filter_=['nodes'])
 
     #open csv
@@ -103,7 +103,7 @@ def create_topology():
     for dd in devices:
         net.add_node(dd.source, dd.source, title=dd.source)
         net.add_node(dd.target, dd.target, title=dd.target)
-        net.add_edge(dd.source, dd.target, value=dd.weight)
+        net.add_edge(dd.source, dd.target, weight=dd.weight)
 
     #add neighbor description
     for node in net.nodes:
@@ -114,4 +114,6 @@ def create_topology():
                     for nn in n:
                         node['title'] += nn
 
+
     net.show(FINAL_HTML)
+

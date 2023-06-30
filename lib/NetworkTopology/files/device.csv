@@ -1,0 +1,407 @@
+source,target,weight,int
+SW-MT2-LT9-02,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+SW-MT2-AUDIT1,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+MYPD-BH-EXT-DIMO,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+MYPD-BH-EXT-DIMO,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 0/1/1
+BMDC-F5-ISP-OUT,MikroTik,1,Gig 2/0/4
+BMDC-F5-ISP-OUT,MAYAPADA-rt,1,Gig 2/0/7
+BMDC-F5-ISP-OUT,BMDC-F5-ISP-OUT.bankmayapada.local,1,Gig 2/0/15
+BMDC-F5-ISP-OUT,BMDC-F5-ISP-OUT.bankmayapada.local,1,Gig 1/0/16
+BMDC-F5-ISP-OUT,MYPD-LINKNET-IB.bankmayapada.local,1,Gig 2/0/19
+BMDC-F5-ISP-OUT,MYPD-LINKNET-IB.bankmayapada.local,1,Gig 2/0/20
+BMDC-F5-ISP-OUT,BMDC-RTR-ISP2.bankmayapada.local,1,Gig 1/0/8
+BMDC-F5-ISP-OUT,BMDC-SW-DATACENTER.bankmayapada.local,1,Fas 0
+BMDRC-EXT-INT-RAK-D7,EFT-DRC-MAYAPADA,1,Gig 1/0/37
+BMDRC-EXT-INT-RAK-D7,BANKMAYA-RT,1,Gig 1/0/1
+BMDRC-EXT-INT-RAK-D7,RO2-BMI-UPH-TO-DCI,1,Gig 1/0/24
+BMDRC-EXT-INT-RAK-D7,RO1-BMI-UPH-TO-NTT,1,Gig 1/0/23
+BMDRC-EXT-INT-RAK-D7,BMDRC-RTRH2H01.bankmayapada.com,1,Gig 1/0/40
+BMDRC-EXT-INT-RAK-D7,BMDRC-RTRH2H01.bankmayapada.com,1,Gig 1/0/38
+BMDRC-EXT-INT-RAK-D7,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+BMDC-RTRWAN-03,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+BMDC-RTRWAN-03,BMDC-EGSW-WAN.bankmayapada.local,1,Gig 0/0/0
+MT2-LT10-SW-06,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDRC-SW-EC-DMZ-RAKC6,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+CCPL-SW-05,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/48
+CCPL-SW-05,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/47
+BMDC-P2P-01,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+BMDC-P2P-01,MikroTik,1,Gig 0/0/2
+BMDC-P2P-01,CCPL-RTR.bankmayapada.local,1,Gig 0/0/2
+BMDC-P2P-01,MYPD-SGO.bankmayapada.local,1,Gig 0/0/3
+BMDC-P2P-01,BMDC-EGSW-WAN.bankmayapada.local,1,Gig 0/0/0
+BMDC-P2P-01,CORE-MT2.bankmayapada.local,1,Gig 0/0/1
+BMDC-ASSW-GFM1-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/34
+BMDC-ASSW-GFM1-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/48
+BMDC-ASSW-GFM1-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/47
+MYPD-TIFHONE,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+MYPD-TIFHONE,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 0/1/0
+BMDC-ASSW-L3M1-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/48
+BMDC-ASSW-L3M1-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/47
+BMDRC-ACCSVR04-RAKC6,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/48
+BMDRC-ACCSVR04-RAKC6,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR04-RAKC6,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+BMDRC-RTRWAN01,BMDRC-EDGE01.bankmayapada.local,1,Gig 0/0/1
+BMDRC-RTRWAN01,BMDRC-EDGE01.bankmayapada.local,1,Gig 0/0/0
+BMDRC-RTRWAN01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Gig 0
+BMDC-MGMT-A3,MYPD-BH-EXT-DIMO.bankmayapada.local,1,Gig 1/0/11
+BMDC-MGMT-A3,MYPD-TIFHONE.bankmayapada.local,1,Gig 1/0/6
+BMDC-MGMT-A3,BMDC-EC-RTR-IB.bankmayapada.local,1,Gig 1/0/43
+BMDC-MGMT-A3,MYPD-SGO.bankmayapada.local,1,Gig 1/0/5
+BMDC-MGMT-A3,BMDC-EC-RTR-01.bankmayapada.local,1,Gig 1/0/44
+BMDC-MGMT-A3,BMDC-EGSW-DEV-01.bankmayapada.local,1,Gig 1/0/37
+BMDC-MGMT-A3,ISR-IT-BACKUP.bankmayapada.local,1,Gig 1/0/8
+BMDC-MGMT-A3,MYPD-LINKNET-IB.bankmayapada.local,1,Gig 1/0/45
+BMDC-MGMT-A3,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/48
+BMDC-MGMT-A3,SW-JTPM.bankmayapada.local,1,Gig 1/0/4
+BMDC-MGMT-A3,MYPD-DUKCAPIL.bankmayapada.local,1,Gig 1/0/13
+BMDC-MGMT-A3,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 1/0/12
+BMDC-MGMT-A3,MYPD-BI.bankmayapada.local,1,Gig 1/0/9
+BMDC-MGMT-A3,BMDC-P2P-01.bankmayapada.local,1,Gig 1/0/46
+BMDC-MGMT-A3,MYPD-STARLINK.bankmayapada.local,1,Gig 1/0/14
+BMDC-MGMT-A3,BMDC-P2P-02.bankmayapada.local,1,Gig 1/0/40
+BMDC-MGMT-A3,BMDC-RTRWAN-03.bankmayapada.local,1,Gig 1/0/2
+BMDC-MGMT-A3,BMDC-RTRWAN-01.bankmayapada.local,1,Gig 1/0/1
+SW-JTPM,BMDC-MGMT-A3.bankmayapada.local,1,Fas 0
+SW-JTPM,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 1/0/22
+SW-JTPM,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 1/0/8
+SW-JTPM,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 1/0/3
+SW-JTPM,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 1/0/4
+BMDC-SW-EC-DMZ,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Fas 0
+BMDC-ASSW-L1M1-KANAN,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/23
+BMDC-ASSW-L1M1-KANAN,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/24
+MYPD-SGO,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+MYPD-SGO,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 0/1/0
+MYPD-SGO,BMDC-P2P-01.bankmayapada.local,1,Gig 0/0/1
+CORE-MT2,SW-MT2-SVR.bankmayapada.local,1,Gig 1/0/3
+CORE-MT2,SW-MT2-HRD.bankmayapada.local,1,Gig 1/1/4
+CORE-MT2,SW-MT2-AUDIT1.bankmayapada.local,1,Gig 1/1/2
+CORE-MT2,SW-MT2-AUDIT2.bankmayapada.local,1,Gig 1/1/3
+CORE-MT2,SW-MT2-LT9-02.bankmayapada.local,1,Gig 1/0/5
+CORE-MT2,BMDC-P2P-01.bankmayapada.local,1,Gig 1/0/1
+CORE-MT2,BMDC-P2P-02.bankmayapada.local,1,Gig 1/0/2
+CORE-MT2,MT2-LT15-04.bankmayapada.local,1,Gig 1/0/15
+CORE-MT2,MT2-LT15-03.bankmayapada.local,1,Gig 1/0/14
+CORE-MT2,SW-MT2-LT9.bankmayapada.local,1,Gig 1/0/4
+CORE-MT2,SW-MT2-IT1.bankmayapada.local,1,Gig 1/0/11
+CORE-MT2,SW-MT2-IT2.bankmayapada.local,1,Gig 1/0/13
+CORE-MT2,SW-MT2-21-04.bankmayapada.local,1,Gig 1/1/1
+CORE-MT2,MT2-LT10-SW-01.bankmayapada.local,1,Gig 1/0/16
+CORE-MT2,MT2-LT10-SW-02.bankmayapada.local,1,Gig 1/0/17
+CORE-MT2,MT2-LT10-SW-03.bankmayapada.local,1,Gig 1/0/18
+CORE-MT2,MT2-LT10-SW-04.bankmayapada.local,1,Gig 1/0/19
+CORE-MT2,MT2-LT10-SW-05.bankmayapada.local,1,Gig 1/0/20
+CORE-MT2,MT2-LT10-SW-06.bankmayapada.local,1,Gig 1/0/22
+BMDC-SW-EXT-DMZ,BMDC-SW-DATACENTER.bankmayapada.local,1,Fas 0
+BMDC-ASSW-L1M1-KIRI,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/23
+BMDC-ASSW-L1M1-KIRI,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/24
+MT2-LT10-SW-05,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDC-ACCSVR-N9K-RAKC1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-ACCSVR-N9K-RAKC1,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/49
+BMDC-ACCSVR-N9K-RAKC1,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/50
+SW-MT2-AUDIT2,SW-MT2-HRD.bankmayapada.local,1,Gig 1/0/47
+SW-MT2-AUDIT2,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+MT2-LT10-SW-04,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDC-RTRWAN-01,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+BMDC-RTRWAN-01,BMDC-EGSW-WAN.bankmayapada.local,1,Gig 0/0/0
+MT2-LT15-04,MT2-LT16-02.bankmayapada.local,1,Gig 1/0/37
+MT2-LT15-04,SW-MT2-16-03.bankmayapada.local,1,Gig 1/0/38
+MT2-LT15-04,SW-MT2-16-01.bankmayapada.local,1,Gig 1/0/36
+MT2-LT15-04,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDC-EC-SW-DMZIB-T1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 1/0/46
+BMDC-EC-IC-IB-OUT,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Fas 0
+CCPL-SW-01,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/48
+CCPL-SW-01,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/47
+SW-MT2-16-03,MT2-LT15-04.bankmayapada.local,1,Gig 1/0/47
+MT2-LT10-SW-02,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+CCPL-CORE-SW,CCPL-RTR.bankmayapada.local,1,Gig 1/0/1
+CCPL-CORE-SW,CCPL-SW-03.bankmayapada.local,1,Gig 1/0/17
+CCPL-CORE-SW,CCPL-SW-03.bankmayapada.local,1,Gig 1/0/18
+CCPL-CORE-SW,CCPL-SW-02.bankmayapada.local,1,Gig 1/0/16
+CCPL-CORE-SW,CCPL-SW-02.bankmayapada.local,1,Gig 1/0/15
+CCPL-CORE-SW,CCPL-SW-01.bankmayapada.local,1,Gig 1/0/14
+CCPL-CORE-SW,CCPL-SW-01.bankmayapada.local,1,Gig 1/0/13
+CCPL-CORE-SW,CCPL-SW-05.bankmayapada.local,1,Gig 1/0/21
+CCPL-CORE-SW,CCPL-SW-05.bankmayapada.local,1,Gig 1/0/22
+CCPL-CORE-SW,CCPL-SW-04.bankmayapada.local,1,Gig 1/0/19
+MYPD-STARLINK,BMDC-MGMT-A3.bankmayapada.local,1,Fas 0/1/1
+MYPD-STARLINK,BMDC-SW-EXT-OUT.bankmayapada.local,1,Fas 0/1/0
+BMDC-EC-SW-IB-CP,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 1/0/41
+MYPD-FINNET,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 0/1/0
+BMDC-EC-RTR-01,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+SW-MT2-HRD,SW-MT2-AUDIT2.bankmayapada.local,1,Gig 1/0/47
+SW-MT2-HRD,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+SW-MT2-IT2,MikroTik,1,Gig 1/0/44
+SW-MT2-IT2,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+SW-RAKC4-15,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/48
+SW-RAKC4-15,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/47
+SW-RAKC4-15,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Fas 0
+BMDC-EGSW-EXT-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/24
+BMDC-EGSW-EXT-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/23
+BMDC-EGSW-EXT-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 0/0
+BMDRC-RTR-EC-01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Gig 0
+SW-MT2-21-04,CORE-MT2.bankmayapada.local,1,Gig 1/0/47
+BMDC-SW-DATACENTER,BMDC-SW-ISP-EC.bankmayapada.local,1,Gig 1/0/12
+BMDC-SW-DATACENTER,BMDC-SW-IC-DMZ.bankmayapada.local,1,Gig 1/0/23
+BMDC-SW-DATACENTER,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/2
+BMDC-SW-DATACENTER,BMDC-F5-ISP-OUT.bankmayapada.local,1,Gig 1/0/35
+BMDC-SW-DATACENTER,BMDC-SW-LT2-NEW.bankmayapada.local,1,Gig 1/0/45
+BMDC-SW-DATACENTER,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/31
+BMDC-SW-DATACENTER,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/47
+BMDC-SW-DATACENTER,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/48
+BMDC-SW-DATACENTER,BMDC-RTR-ISP2.bankmayapada.local,1,Gig 1/0/6
+BMDC-SW-DATACENTER,BMDC-SW-EXT-DMZ.bankmayapada.local,1,Gig 1/0/30
+BMDC-SW-DATACENTER,BMDC-DEV-RAKC1,1,Gig 1/0/34
+SW-MT2-IT1,CORE-MT2.bankmayapada.local,1,Gig 1/0/47
+SW-MT2-LT9,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDC-SW-RAK-D1,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/47
+BMDC-SW-RAK-D1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Fas 0
+BMDC-EGSW-EC-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 2/0/24
+BMDC-EGSW-EC-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/24
+BMDC-EGSW-EC-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 2/0/23
+BMDC-EGSW-EC-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/23
+BMDC-EGSW-EC-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 0/0
+BMDC-P2P-02,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+BMDC-P2P-02,BMDC-EGSW-WAN.bankmayapada.local,1,Gig 0/0/0
+BMDC-P2P-02,CORE-MT2.bankmayapada.local,1,Gig 0/0/1
+MT2-LT10-SW-03,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+BMDC-SW-ISP-EC,BMDC-SW-DATACENTER.bankmayapada.local,1,Fas 0
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/30
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/29
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/28
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/27
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/26
+BMDC-DEV-DMZ-SW-C4,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/25
+BMDC-DEV-DMZ-SW-C4,BMDC-DEV-RAKC1,1,Gig 1/0/2
+BMDC-DEV-DMZ-SW-C4,BMDC-DEV-RAKC1,1,Gig 1/0/1
+BMDC-DEV-DMZ-SW-C4,BMDC-SW-DATACENTER.bankmayapada.local,1,Gig 1/0/44
+CCPL-SW-03,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/47
+CCPL-SW-03,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/48
+MT2-LT10-SW-01,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+CCPL-SW-02,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/48
+CCPL-SW-02,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/47
+CCPL-SW-04,CCPL-CORE-SW.bankmayapada.local,1,Gig 1/0/48
+BMDC-SW-IC-DMZ,BMDC-SW-DATACENTER.bankmayapada.local,1,Fas 0
+BMDC-DIST-MT1,BMDC-MGMT-A3.bankmayapada.local,1,Gig 1/0/9
+BMDC-DIST-MT1,BMDC-CZ-DMZ-01.bankmayapada.local,1,Gig 1/0/5
+BMDC-DIST-MT1,BMDC-ASSW-L1M1-KANAN.bankmayapada.local,1,Gig 1/0/3
+BMDC-DIST-MT1,BMDC-ASSW-L1M1-KANAN.bankmayapada.local,1,Gig 1/0/4
+BMDC-DIST-MT1,BMDC-ASSW-GFM1-01.bankmayapada.local,1,Gig 1/0/17
+BMDC-DIST-MT1,BMDC-ASSW-GFM1-01.bankmayapada.local,1,Gig 1/0/14
+BMDC-DIST-MT1,BMDC-ASSW-GFM1-01.bankmayapada.local,1,Gig 1/0/13
+BMDC-DIST-MT1,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Ten 1/1/4
+BMDC-DIST-MT1,BMDC-SW-LT2-NEW.bankmayapada.local,1,Gig 1/0/2
+BMDC-DIST-MT1,BMDC-SW-LT2-NEW.bankmayapada.local,1,Gig 1/0/10
+BMDC-DIST-MT1,BMDC-ASSW-L1M1-KIRI.bankmayapada.local,1,Gig 1/0/15
+BMDC-DIST-MT1,BMDC-ASSW-L1M1-KIRI.bankmayapada.local,1,Gig 1/0/16
+BMDC-DIST-MT1,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Ten 1/1/3
+BMDC-DIST-MT1,BMDC-ASSW-L3M1-01.bankmayapada.local,1,Gig 1/0/12
+BMDC-DIST-MT1,BMDC-ASSW-L3M1-01.bankmayapada.local,1,Gig 1/0/11
+BMDC-DIST-MT1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 1/0/24
+BMDC-DIST-MT1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 1/0/23
+BMDC-DIST-MT1,BMDC-SW-DATACENTER.bankmayapada.local,1,Gig 0/0
+BMDC-DIST-MT1,BMDC-SW-DATACENTER.bankmayapada.local,1,Gig 1/0/22
+BMDC-DIST-MT1,BMDC-SW-DATACENTER.bankmayapada.local,1,Gig 1/0/21
+SW-MT2-SVR,MT2-DEV-DMZ1.bankmayapada.local,1,Gig 1/0/45
+SW-MT2-SVR,CORE-MT2.bankmayapada.local,1,Gig 1/0/48
+MYPD-ARTAJASA,BMDC-SW-EXT-OUT.bankmayapada.local,1,Gig 0/1/0
+BMDRC-SW-EC-OUT,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+BMDC-SW-EXT-OUT,BMDC-MGMT-A3.bankmayapada.local,1,Fas 0
+BMDC-SW-EXT-OUT,ITBACKUP-ALTERRA.bankmayapada.local,1,Gig 1/0/11
+BMDC-SW-EXT-OUT,MYPD-BH-EXT-DIMO.bankmayapada.local,1,Gig 1/0/5
+BMDC-SW-EXT-OUT,RO1-AWS-TO-DCI,1,Gig 1/0/14
+BMDC-SW-EXT-OUT,MYPD-TIFHONE.bankmayapada.local,1,Gig 1/0/29
+BMDC-SW-EXT-OUT,RO2-AWS-TO-NTT,1,Gig 1/0/13
+BMDC-SW-EXT-OUT,MYPD-SGO.bankmayapada.local,1,Gig 1/0/35
+BMDC-SW-EXT-OUT,EFT-MAYAPADA-TOWER.primacom.co.id,1,Gig 1/0/33
+BMDC-SW-EXT-OUT,ISR-IT-BACKUP.bankmayapada.local,1,Gig 1/0/26
+BMDC-SW-EXT-OUT,SW-JTPM.bankmayapada.local,1,Gig 2/0/16
+BMDC-SW-EXT-OUT,SW-JTPM.bankmayapada.local,1,Gig 1/0/20
+BMDC-SW-EXT-OUT,SW-JTPM.bankmayapada.local,1,Gig 1/0/27
+BMDC-SW-EXT-OUT,SW-JTPM.bankmayapada.local,1,Gig 1/0/19
+BMDC-SW-EXT-OUT,MYPD-DUKCAPIL.bankmayapada.local,1,Gig 1/0/23
+BMDC-SW-EXT-OUT,MYPD-BI.bankmayapada.local,1,Gig 1/0/25
+BMDC-SW-EXT-OUT,MYPD-STARLINK.bankmayapada.local,1,Gig 1/0/30
+BMDC-SW-EXT-OUT,MYPD-KEMENKEU.bankmayapada.local,1,Gig 1/0/28
+BMDC-SW-EXT-OUT,MYPD-FINNET.bankmayapada.local,1,Gig 1/0/32
+BMDC-SW-EXT-OUT,MYPD-ARTAJASA.bankmayapada.local,1,Gig 1/0/34
+BMDC-SW-EXT-OUT,BMDC-DJP-B.bankmayapada.local,1,Gig 1/0/10
+BMDRC-EDGE01,BMDRC-RTRWAN01.bankmayapada.local,1,Gig 1/0/12
+BMDRC-EDGE01,BMDRC-RTRWAN01.bankmayapada.local,1,Gig 1/0/11
+BMDRC-EDGE01,BMDRC-CORE01(JAF1801ARAG),1,Gig 1/0/24
+BMDRC-EDGE01,BMDRC-CORE01(JAF1801ARAG),1,Gig 1/0/23
+BMDRC-EDGE01,BMDRC-RTRH2H01.bankmayapada.com,1,Gig 1/0/8
+BMDRC-EDGE01,BMDRC-RTRH2H01.bankmayapada.com,1,Gig 1/0/7
+BMDRC-EDGE01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Gig 0/0
+BMDRC-ACCSVR02-RAK-D06,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/48
+BMDRC-ACCSVR02-RAK-D06,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR02-RAK-D06,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+BMDC-CZ-DMZ-01,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/47
+BMDC-EC-RTR-IB,BMDC-MGMT-A3.bankmayapada.local,1,Gig 0
+BMDC-CORE-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-CORE-01,BMDC-OTV-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/3
+BMDC-CORE-01,BMDC-EGSW-DEV-01.bankmayapada.local,1,Eth1/4
+BMDC-CORE-01,BMDC-EGSW-EXT-01.bankmayapada.local,1,Eth1/5
+BMDC-CORE-01,BMDC-EGSW-EC-01.bankmayapada.local,1,Eth1/8
+BMDC-CORE-01,BMDC-EGSW-EC-01.bankmayapada.local,1,Eth1/9
+BMDC-CORE-01,BMDC-EGSW-IC-01.bankmayapada.local,1,Eth1/10
+BMDC-CORE-01,BMDC-DIST-MT1.bankmayapada.local,1,Eth1/11
+BMDC-CORE-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Eth1/12
+BMDC-CORE-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Eth1/13
+BMDC-CORE-01,BMDC-EGSW-WAN.bankmayapada.local,1,Eth1/15
+BMDC-CORE-01,BMDC-OTV-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/16
+SW-MT2-16-01,MT2-LT15-04.bankmayapada.local,1,Gig 1/0/47
+BMDC-AGGSVR-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-AGGSVR-01,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/18
+BMDC-AGGSVR-01,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/20
+BMDC-AGGSVR-01,BMDC-ACCSVR-N9K-RAKC1(FDO213317J8),1,Eth1/21
+BMDC-AGGSVR-01,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/22
+BMDC-AGGSVR-01,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/24
+BMDC-AGGSVR-01,BMDC-OTV-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/28
+BMDC-AGGSVR-01,SW-RAKC4-15.bankmayapada.local,1,Eth1/30
+BMDC-AGGSVR-01,BMDC-OTV-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/35
+BMDC-AGGSVR-01,BMDC-ACCSVR-N9K-RAKD1(FDO213317JS),1,Eth1/38
+BMDC-AGGSVR-01,BMDC-SW-RAK-D1.bankmayapada.local,1,Eth1/40
+BMDC-AGGSVR-01,SW-TORBIFDC-01.bankmayapada.local,1,Eth101/1/1
+BMDC-AGGSVR-01,SW-TORBIFDC-01.bankmayapada.local,1,Eth101/1/2
+BMDC-AGGSVR-01,SW-TORBIFDC-02.bankmayapada.local,1,Eth101/1/3
+BMDC-AGGSVR-01,SW-TORBIFDC-02.bankmayapada.local,1,Eth101/1/4
+BMDC-AGGSVR-01,a46c2aebfda4,1,Eth104/1/5
+BMDC-ACCSVR-N9K-RAKD1,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-ACCSVR-N9K-RAKD1,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/49
+BMDC-ACCSVR-N9K-RAKD1,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/50
+BMDRC-CORE01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,mgmt0
+BMDRC-CORE01,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Eth3/2
+BMDRC-CORE01,BMDRC-OTV01.bankmayapada.local(JAF1801ARAG),1,Eth3/8
+BMDRC-CORE01,BMDRC-EDGE01.bankmayapada.local,1,Eth3/10
+BMDRC-CORE01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Eth4/1
+BMDRC-CORE01,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Eth4/2
+BMDRC-CORE01,BMDRC-OTV01.bankmayapada.local(JAF1801ARAG),1,Eth4/8
+BMDRC-CORE01,BMDRC-EDGE01.bankmayapada.local,1,Eth4/10
+BMDC-CORE-02,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-CORE-02,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/3
+BMDC-CORE-02,BMDC-OTV-02.bankmayapada.local(FXS2136Q11W),1,Eth1/5
+BMDC-CORE-02,BMDC-OTV-02.bankmayapada.local(FXS2136Q11W),1,Eth1/6
+BMDC-CORE-02,BMDC-EGSW-DEV-01.bankmayapada.local,1,Eth1/7
+BMDC-CORE-02,BMDRC-CORE01(JAF1801ARAG),1,Eth1/8
+BMDC-CORE-02,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/9
+BMDC-CORE-02,BMDC-EGSW-IC-01.bankmayapada.local,1,Eth1/10
+BMDC-CORE-02,BMDC-EGSW-EC-01.bankmayapada.local,1,Eth1/11
+BMDC-CORE-02,BMDC-EGSW-EC-01.bankmayapada.local,1,Eth1/12
+BMDC-CORE-02,BMDC-EGSW-EXT-01.bankmayapada.local,1,Eth1/13
+BMDC-CORE-02,BMDC-EGSW-WAN.bankmayapada.local,1,Eth1/15
+BMDC-CORE-02,BMDC-DIST-MT1.bankmayapada.local,1,Eth1/16
+BMDRC-ACCSVR-RAKC5,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/48
+BMDRC-ACCSVR-RAKC5,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR-RAKC5,SW-TORBIFDRC-02.bankmayapada.local,1,Gig 1/0/36
+BMDRC-ACCSVR-RAKC5,SW-TORBIFDRC-02.bankmayapada.local,1,Gig 1/0/35
+BMDRC-ACCSVR-RAKC5,SW-TORBIFDRC-01.bankmayapada.local,1,Gig 1/0/34
+BMDRC-ACCSVR-RAKC5,SW-TORBIFDRC-01.bankmayapada.local,1,Gig 1/0/33
+BMDRC-ACCSVR-RAKC5,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Fas 0
+BMDC-EGSW-WAN,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/24
+BMDC-EGSW-WAN,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/23
+BMDC-EGSW-WAN,BMDC-P2P-01.bankmayapada.local,1,Gig 1/0/2
+BMDC-EGSW-WAN,BMDC-P2P-02.bankmayapada.local,1,Gig 1/0/5
+BMDC-EGSW-WAN,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 0/0
+BMDC-EGSW-WAN,BMDC-RTRWAN-03.bankmayapada.local,1,Gig 1/0/6
+BMDC-EGSW-WAN,BMDC-RTRWAN-01.bankmayapada.local,1,Gig 1/0/1
+BMDC-EGSW-IC-01,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/24
+BMDC-EGSW-IC-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/23
+BMDC-EGSW-IC-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 0/0
+BMDRC-RTRH2H01,BMDRC-EXT-INT-RAK-D7.bankmayapada.local,1,Fas 0/2/0
+BMDRC-RTRH2H01,BMDRC-EXT-INT-RAK-D7.bankmayapada.local,1,Fas 0/1/1
+BMDRC-RTRH2H01,BMDRC-EDGE01.bankmayapada.local,1,Gig 0/0
+BMDRC-RTRH2H01,BMDRC-EDGE01.bankmayapada.local,1,Gig 0/2
+BMDRC-RTRH2H01,DRC-MAYAPADA-SD-TLK,1,Fas 0/3/1
+BMDRC-RTRH2H01,DRC-MAYAPADA-SD-LA,1,Fas 0/3/0
+BMDRC-RTRH2H01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Gig 0/1
+CCPL-RTR,CCPL-CORE-SW.bankmayapada.local,1,Gig 0/1/0
+BMDC-SW-MGMT-RAK-B1,BMDC-EGSW-EXT-01.bankmayapada.local,1,Gig 1/0/36
+BMDC-SW-MGMT-RAK-B1,BMDC-OTV-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/42
+BMDC-SW-MGMT-RAK-B1,BMDC-ACCSVR-N9K-RAKC1(FDO213317J8),1,Gig 1/0/17
+BMDC-SW-MGMT-RAK-B1,BMDC-SW-EC-DMZ.bankmayapada.local,1,Gig 1/0/22
+BMDC-SW-MGMT-RAK-B1,BMDC-EC-IC-IB-OUT.bankmayapada.local,1,Gig 1/0/27
+BMDC-SW-MGMT-RAK-B1,BMDC-NX-02-Admin(FXS2136Q11W),1,Gig 1/0/14
+BMDC-SW-MGMT-RAK-B1,BMDC-RAK-D1-DEV.bankmayapada.local,1,Gig 1/0/19
+BMDC-SW-MGMT-RAK-B1,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/14
+BMDC-SW-MGMT-RAK-B1,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/14
+BMDC-SW-MGMT-RAK-B1,BMDC-EGSW-WAN.bankmayapada.local,1,Gig 1/0/33
+BMDC-SW-MGMT-RAK-B1,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/48
+BMDC-SW-MGMT-RAK-B1,BMDC-DIST-MT1.bankmayapada.local,1,Gig 1/0/47
+BMDC-SW-MGMT-RAK-B1,BMDC-EGSW-IC-01.bankmayapada.local,1,Gig 1/0/30
+BMDC-SW-MGMT-RAK-B1,SW-RAKC4-15.bankmayapada.local,1,Gig 1/0/6
+BMDC-SW-MGMT-RAK-B1,BMDC-EDGE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/42
+BMDC-SW-MGMT-RAK-B1,BMDC-EGSW-EC-01.bankmayapada.local,1,Gig 1/0/25
+BMDC-SW-MGMT-RAK-B1,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/42
+BMDC-SW-MGMT-RAK-B1,BMDC-NX-01-Admin(FXS1943Q3EM),1,Gig 1/0/42
+BMDC-SW-MGMT-RAK-B1,BMDC-EC-SW-DMZIB-T1.bankmayapada.local,1,Gig 1/0/7
+BMDC-SW-MGMT-RAK-B1,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Gig 1/0/42
+BMDC-SW-MGMT-RAK-B1,BMDC-EC-SW-DMZIB-T2.bankmayapada.local,1,Gig 1/0/8
+BMDC-SW-MGMT-RAK-B1,BMDC-OTV-02.bankmayapada.local(FXS2136Q11W),1,Gig 1/0/14
+BMDC-SW-MGMT-RAK-B1,BMDC-SW-RAK-D1.bankmayapada.local,1,Gig 1/0/16
+BMDC-SW-MGMT-RAK-B1,BMDC-ACCSVR-N9K-RAKD1(FDO213317JS),1,Gig 1/0/15
+BMDC-SW-MGMT-RAK-B1,BMDC-EC-SW-IB-CP.bankmayapada.local,1,Gig 1/0/9
+BMDC-OTV-01,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-OTV-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/41
+BMDC-OTV-01,BMDC-CORE-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/42
+BMDC-OTV-01,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/43
+BMDC-OTV-01,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/44
+BMDRC-OTV01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,mgmt0
+BMDRC-OTV01,BMDRC-CORE01(JAF1801ARAG),1,Eth3/21
+BMDRC-OTV01,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Eth3/22
+BMDRC-OTV01,BMDRC-CORE01(JAF1801ARAG),1,Eth4/21
+BMDRC-OTV01,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Eth4/22
+BMDC-EC-SW-DMZIB-T2,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Gig 1/0/46
+BMDRC-AGGRSVR01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,mgmt0
+BMDRC-AGGRSVR01,BMDRC-CORE01(JAF1801ARAG),1,Eth3/25
+BMDRC-AGGRSVR01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Eth3/26
+BMDRC-AGGRSVR01,BMDRC-ACCSVR02-RAK-D06.bankmayapada.loca,1,Eth3/27
+BMDRC-AGGRSVR01,BMDRC-OTV01.bankmayapada.local(JAF1801ARAG),1,Eth3/28
+BMDRC-AGGRSVR01,BMDRC-ACCSVR-RAKC5.bankmayapada.local,1,Eth3/29
+BMDRC-AGGRSVR01,BMDRC-ACCSVR04-RAKC6.bankmayapada.local,1,Eth3/30
+BMDRC-AGGRSVR01,BMDRC-CORE01(JAF1801ARAG),1,Eth4/25
+BMDRC-AGGRSVR01,BMDRC-ACCSVR01-RAK-D07.bankmayapada.loca,1,Eth4/26
+BMDRC-AGGRSVR01,BMDRC-ACCSVR02-RAK-D06.bankmayapada.loca,1,Eth4/27
+BMDRC-AGGRSVR01,BMDRC-OTV01.bankmayapada.local(JAF1801ARAG),1,Eth4/28
+BMDRC-AGGRSVR01,BMDRC-ACCSVR-RAKC5.bankmayapada.local,1,Eth4/29
+BMDRC-AGGRSVR01,BMDRC-ACCSVR04-RAKC6.bankmayapada.local,1,Eth4/30
+BMDC-OTV-02,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-OTV-02,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Eth1/41
+BMDC-OTV-02,BMDC-CORE-02.bankmayapada.local(FXS2136Q11W),1,Eth1/42
+BMDC-OTV-02,BMDC-AGGSVR-02.bankmayapada.local(FXS2136Q11W),1,Eth1/44
+BMDC-AGGSVR-02,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,mgmt0
+BMDC-AGGSVR-02,SW-RAKC4-15.bankmayapada.local,1,Eth1/28
+BMDC-AGGSVR-02,BMDC-ACCSVR-N9K-RAKC1(FDO213317J8),1,Eth1/30
+BMDC-AGGSVR-02,BMDC-ACCSVR-N9K-RAKD1(FDO213317JS),1,Eth1/31
+BMDC-AGGSVR-02,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/35
+BMDC-AGGSVR-02,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/36
+BMDC-AGGSVR-02,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/37
+BMDC-AGGSVR-02,BMDC-AGGSVR-01.bankmayapada.local(FXS1943Q3EM),1,Eth1/38
+BMDC-AGGSVR-02,BMDC-OTV-02.bankmayapada.local(FXS2136Q11W),1,Eth1/40
+BMDC-AGGSVR-02,SW-TORBIFDC-01.bankmayapada.local,1,Eth101/1/1
+BMDC-AGGSVR-02,SW-TORBIFDC-01.bankmayapada.local,1,Eth101/1/2
+BMDC-AGGSVR-02,SW-TORBIFDC-02.bankmayapada.local,1,Eth101/1/3
+BMDC-AGGSVR-02,SW-TORBIFDC-02.bankmayapada.local,1,Eth101/1/4
+BMDC-AGGSVR-02,a46c2aebfda4,1,Eth104/1/5
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/6
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/5
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/3
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/2
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/1
+BMDC-RAK-D1-DEV,BMDC-DEV-DMZ-SW-C4.bankmayapada.local,1,Gig 1/0/4
+BMDC-RAK-D1-DEV,BMDC-SW-MGMT-RAK-B1.bankmayapada.local,1,Fas 0
+BMDRC-ACCSVR01-RAK-D07,BMDRC-EXT-INT-RAK-D7.bankmayapada.local,1,Gig 1/0/43
+BMDRC-ACCSVR01-RAK-D07,BMDRC-OTV01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR01-RAK-D07,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/50
+BMDRC-ACCSVR01-RAK-D07,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/49
+BMDRC-ACCSVR01-RAK-D07,BMDRC-AGGRSVR01.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR01-RAK-D07,BMDRC-ACCSVR-RAKC5.bankmayapada.local,1,Gig 1/0/37
+BMDRC-ACCSVR01-RAK-D07,BMDRC-ACCSVR04-RAKC6.bankmayapada.local,1,Gig 1/0/38
+BMDRC-ACCSVR01-RAK-D07,BMDRC-RTRWAN01.bankmayapada.local,1,Gig 1/0/40
+BMDRC-ACCSVR01-RAK-D07,BMDRC-EDGE01.bankmayapada.local,1,Gig 1/0/46
+BMDRC-ACCSVR01-RAK-D07,BMDRC-N7KADM.bankmayapada.local(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR01-RAK-D07,BMDRC-CORE01(JAF1801ARAG),1,Gig 1/0/47
+BMDRC-ACCSVR01-RAK-D07,BMDRC-SW-EC-DMZ-RAKC6.bankmayapada.local,1,Gig 1/0/36
+BMDRC-ACCSVR01-RAK-D07,BMDRC-RTR-EC-01.bankmayapada.local,1,Gig 1/0/34
+BMDRC-ACCSVR01-RAK-D07,BMDRC-SW-EC-OUT.bankmayapada.local,1,Gig 1/0/35
+BMDRC-ACCSVR01-RAK-D07,BMDRC-RTRH2H01.bankmayapada.com,1,Gig 1/0/45
+BMDRC-ACCSVR01-RAK-D07,BMDRC-ACCSVR02-RAK-D06.bankmayapada.loca,1,Gig 1/0/39

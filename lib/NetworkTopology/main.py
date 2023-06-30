@@ -2,10 +2,15 @@ from pyvis.network import Network
 from lib.NetworkTopology.device import Device
 import csv
 import os
+import sys
 
 CDP_PATH = "out/getCDP/"
-DEVICE_CSV = "lib/NetworkTopology/files/device.csv"
-FINAL_HTML = "lib/NetworkTopology/files/index.html"
+CURRENT_PATH = "lib/NetworkTopology/"
+DEVICE_CSV = CURRENT_PATH+"files/device.csv"
+FINAL_HTML = CURRENT_PATH+"files/index.html"
+PYVIS_LIB = CURRENT_PATH+"lib"
+sys.path.append(PYVIS_LIB)
+
 
 def main():
     cdp_file = get_cdp()

@@ -1,20 +1,26 @@
 from pyvis.network import Network
-from libs.NetworkTopology.nettop import Device
+from lib.NetworkTopology.nettop import Device
 import csv
 import os
 import re
-import subprocess
 
 CDP_PATH = "out/getCDP/"
-CURRENT_PATH = "libs/NetworkTopology/"
-DEVICE_CSV = CURRENT_PATH+"files/device.csv"
-FINAL_HTML = CURRENT_PATH+"files/index.html"
+CURRENT_PATH = "lib/NetworkTopology/"
+DEVICE_CSV = CURRENT_PATH+"files/topology.csv"
+FINAL_HTML = "out/NetworkTopology/topology.html"
 
 def main():
+    create_folder()
     cdp_file = get_cdp()
     if cdp_file != "":
         extract_cdp(cdp_file)
         create_topology()
+
+def create_folder():
+    path = FINAL_HTML
+    path = path.replace("topology.html", "")
+    if not os.path.exists(path):
+        os.makedirs(path)
 
 def get_cdp():
     cdp_list = []
@@ -28,17 +34,19 @@ def get_cdp():
                     cdp_final = the_cdp.replace("out/getCDP/", "")
                     cdp_list.append(cdp_final)
     except:
-        print("No CDP file found. \nRun the Show CDP Menu first.")
+        print("\nNo CDP file found. \nRun the Show CDP Menu first.\n")
         return ""
     
     if cdp_list == []:
-        print("No CDP file found. \nRun the Show CDP Menu first.")
+        print("\nNo CDP file found. \nRun the Show CDP Menu first.\n")
         return ""
     else:
+        print("\nSelect the CDP file :\n")
         for idx, file in enumerate(cdp_list):
             print(f"{idx+1}. {file}")
 
-        cdp_input = int(input("Select your input : "))
+        print("")
+        cdp_input = int(input("Select CDP file : "))
         cdp_file = cdp_list[cdp_input-1]
 
         return cdp_file
@@ -76,6 +84,7 @@ def extract_cdp(cdp_file):
 
 
 def create_topology():
+    print("\nCreating topology...\n")
     net = Network(height='1000px', width='100%', bgcolor='#222222', font_color='white', notebook=True)
     # net.show_buttons(filter_=['nodes'])
 
@@ -116,4 +125,5 @@ def create_topology():
 
 
     net.show(FINAL_HTML)
+    print("\nTopology successfully created.")
 

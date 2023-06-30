@@ -44,7 +44,7 @@ def get_cdp():
 
 def extract_cdp(cdp_file):
     columns = ["Local Hostname", "Remote Hostname", "Local Interface"]
-    replace = ["\(", ".bankmayapada.", ".primacom."]
+    replace = ["\(", ".BANKMAYAPADA.", ".PRIMACOM."]
 
     input_file = f"{CDP_PATH}{cdp_file}"
     output_file = DEVICE_CSV
@@ -54,12 +54,10 @@ def extract_cdp(cdp_file):
         extracted_data = []
 
         for row in reader:
-            source = row[columns[0]]
-            target = row[columns[1]]
+            source = row[columns[0]].upper()
+            target = row[columns[1]].upper()
             for r in replace:
-                # source = source.replace(r, "")
                 source = re.sub(f'{r}.*','', source)
-                # target = target.replace(r, "")
                 target = re.sub(f'{r}.*','', target)
 
             extracted_row = {

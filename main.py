@@ -13,4 +13,4 @@ from lib.NetworkTopology.main import main as Topology
 # Custom()
 # CDP()
 # CRC()
-Topology()
+# Topology()

@@ -3,7 +3,7 @@ devices:
     connections:
       cli:
         ip: 198.18.0.121
-        protocol: ssh
+        protocol: telnet
     credentials:
       default:
         password: cisco
@@ -16,7 +16,7 @@ devices:
     connections:
       cli:
         ip: 198.18.0.122
-        protocol: ssh
+        protocol: telnet
     credentials:
       default:
         password: cisco

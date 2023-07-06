@@ -69,9 +69,8 @@ class Routers:
     def connect(self, i):
         self.i = i
 
-        if self.port == 22:
-            device_type = "cisco_ios"
-        else:
+        device_type = "cisco_ios"
+        if self.port == 23:
             device_type = "cisco_ios_telnet"
 
         device = {

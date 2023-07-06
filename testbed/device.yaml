@@ -1,8 +1,8 @@
 devices:
-  xe1:
+  dist-rtr01:
     connections:
       cli:
-        ip: 198.18.0.121
+        ip: 10.10.20.175
         protocol: telnet
     credentials:
       default:
@@ -12,10 +12,10 @@ devices:
         password: cisco
     os: iosxe
     type: iosxe
-  xe2:
+  dist-rtr02:
     connections:
       cli:
-        ip: 198.18.0.122
+        ip: 10.10.20.176
         protocol: telnet
     credentials:
       default:
@@ -25,16 +25,55 @@ devices:
         password: cisco
     os: iosxe
     type: iosxe
-  xr1:
+  dist-sw01:
     connections:
       cli:
-        ip: 198.18.0.131
+        ip: 10.10.20.177
+        protocol: telnet
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: nxos
+    type: nxos
+  dist-sw02:
+    connections:
+      cli:
+        ip: 10.10.20.178
         protocol: ssh
     credentials:
       default:
-        password: cisco123
+        password: cisco
         username: cisco
       enable:
-        password: cisco123
-    os: iosxr
-    type: iosxr
+        password: cisco
+    os: nxos
+    type: nxos
+  edge-sw01:
+    connections:
+      cli:
+        ip: 10.10.20.172
+        protocol: telnet
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: iosxe
+    type: iosxe
+  internet-rtr01:
+    connections:
+      cli:
+        ip: 10.10.20.181
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: iosxe
+    type: iosxe
